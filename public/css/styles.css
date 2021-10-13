@@ -1,3 +1,9 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* information containers */
 .required-info-container {
   display: inline-block;
@@ -143,7 +149,7 @@ input:hover {
   margin-left: 15px;
 }
 
-/* dropdown */
+/* dropdowns*/
 .select-nationality {
   position: absolute;
   width: 300px;
@@ -153,6 +159,46 @@ input:hover {
   overflow: auto;
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
 }
-option:hover {
+.select-specialization {
+  position: absolute;
+  width: 300px;
+  border: 2px solid;
+  height: auto;
+  font-size: 15px;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+}
+.select-nationality > option:hover {
   background-color: #00ffa2;
+}
+.select-specialization > option:hover {
+  background-color: #00ffa2;
+}
+
+/* Profile Picture */
+.profile-container {
+  bottom: 330px;
+  position: relative;
+  border: 1px;
+  left: 1000px;
+}
+.profile-container > input {
+  padding-left: 0px;
+  border: 0;
+  border-radius: 0px;
+  height: 30px;
+  box-shadow: none;
+  display: none;
+}
+
+.profile-image-container {
+  position: relative;
+  height: 300px;
+  width: 500px;
+  border-radius: 8px;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.profile-image-container > img {
+  height: 100px;
+  width: 100px;
 }

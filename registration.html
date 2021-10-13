@@ -121,6 +121,17 @@
           </table>
         </div>
         <br><br><br>
+
+        <!--profile upload -->
+        <div class="profile-container">
+          <input type="file" name="file_upload" value="" />
+          <br>
+          <div class="profile-image-container">
+
+            <button type="button" onclick="
+            "><img id="profileImg" src="#"></button>
+          </div>
+        </div>
         <div class="hr-text">
           <span>
             OPTIONAL
@@ -367,16 +378,21 @@
                 <!-- specialization -->
                 <div class="specialization-container">
                   <br>
-                  <label for="specialization"><b>What culinary method/s<br /> do you specialize in?</b></label>
-                  <br><br />
-                  <input type="text" name="specialization" size="30"
-                    placeholder="ex. baking, italian cuisine, etc."></input>
+                  <label for="specialization"><b>What culinary method/s<br /> do you specialize in?</b></label><br>
+                  <select name="specialization" class="select-specialization"
+                    onmousedown="if(this.options.length>3){this.size=4;}" onchange="this.size=0" onblur="this.size=0;">
+                    <option value="">-- select one --</option>
+                    <option value="cuisine">Cuisine</option>
+                    <option value="baking">Baking</option>
+                    <option value="mixology">Drink-making</option>
+                  </select>
                 </div>
               </td>
             </tr>
             <tr>
               <td>
                 <!-- learn  -->
+                <br>
                 <div class="learn-container">
                   <br>
                   <label for="learn"><b>
