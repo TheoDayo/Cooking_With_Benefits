@@ -114,6 +114,9 @@ input[type="radio"]:checked {
     rgba(255, 175, 0, 1) 100%
   );
 }
+.submit-button > button:hover {
+  background-color: #00ffa2;
+}
 /* horizontal line with text */
 .hr-text {
   display: block;
