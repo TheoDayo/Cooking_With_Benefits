@@ -82,21 +82,23 @@ input:hover {
 }
 
 /* gender buttons */
-.gender-button {
-  background-color: white;
-  border: 2px solid;
-  border-radius: 8px;
-  width: 75px;
-  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
-  height: 35px;
-  font-weight: bold;
-  padding-right: 10px;
+input[type="radio"] {
+  position: relative;
+  vertical-align: text-bottom;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-clip: content-box;
+  border: 2px #00ffa2;
+  background-color: gray;
+  border-radius: 50%;
 }
-
-.gender-button:hover {
-  border: 2px solid #00ffa2;
+input[type="radio"]:checked {
+  background-color: #00ffa2;
 }
-
 /* submit button */
 .submit-button {
   font-size: large;
@@ -130,7 +132,6 @@ input:hover {
 
 .hr-text > span:before,
 .hr-text > span:after {
-  /* position: absolute; */
   content: "";
   position: absolute;
   top: 50%;
@@ -179,26 +180,48 @@ input:hover {
 .profile-container {
   bottom: 330px;
   position: relative;
-  border: 1px;
-  left: 1000px;
+  left: 1100px;
 }
-.profile-container > input {
-  padding-left: 0px;
-  border: 0;
-  border-radius: 0px;
-  height: 30px;
-  box-shadow: none;
+input[type="file"] {
   display: none;
 }
 
 .profile-image-container {
+  bottom: 650px;
   position: relative;
-  height: 300px;
-  width: 500px;
-  border-radius: 8px;
-  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  left: 980px;
+  position: absolute;
+  transform: translate(10%, 0%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid white;
 }
-.profile-image-container > img {
-  height: 100px;
-  width: 100px;
+#profileImg {
+  width: 250px;
+  height: 250px;
+}
+#upload_btn {
+  text-align: center;
+  position: absolute;
+  width: 250px;
+  height: 50px;
+  top: 205px;
+  left: 1px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-family: sans-serif;
+  cursor: pointer;
+  display: none;
+}
+
+/* terms and conditions */
+.terms-container {
+  position: relative;
+  left: 120px;
+  font-weight: bold;
+  font-size: medium;
 }

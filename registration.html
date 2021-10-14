@@ -67,15 +67,15 @@
             <tr>
               <td>
                 <!-- gender -->
-                <div class="gender-btn-group">
+                <div class="gender-rdbtn-group">
                   <br>
-                  <label for="gender"><b>Gender</b></label><br>
-                  <input type="button" class="gender-button" id="btn_male" name="gender" value="male"
-                    onclick="chooseButton()">
-                  <input type="button" class="gender-button" id="btn_female" name="gender" value="female"
-                    onclick="chooseButton()">
-                  <input type="button" class="gender-button" id="btn_other" name="gender" value="other"
-                    onclick="chooseButton()">
+                  <label for="gender-radio"><b>Gender</b></label><br>
+                  <input type="radio" class="gender-radio" id="rd_male" name="gender" value="male">
+                  <label for="rd_male">Male</label>
+                  <input type="radio" class="gender-radio" id="rd_female" name="gender" value="female">
+                  <label for="rd_female">Female</label>
+                  <input type="radio" class="gender-radio" id="rd_other" name="gender" value="other">
+                  <label for="rd_other">Other</label>
                 </div>
               </td>
             </tr>
@@ -102,7 +102,8 @@
                   <br>
                   <label for="password"><b>Password</b></label>
                   <br>
-                  <input type="password" name="password" size="30" placeholder="Password..." required></input>
+                  <input type="password" name="password" id="password" size="30" placeholder="Password..." minlength="6"
+                    maxlength="16" required></input>
                 </div>
               </td>
             </tr>
@@ -111,10 +112,12 @@
                 <!-- retype password -->
                 <div class="password-container">
                   <br>
-                  <label for="retype-password"><b>Re-type Password</b></label>
+                  <label for="confirm-password"><b>Confirm Password</b></label>
                   <br>
-                  <input type="password" name="retype-password" size="30" placeholder="Re-type password..."
-                    required></input>
+                  <input type="password" name="confirm-password" id="confirm_password" size="30" minlength="6"
+                    maxlength="16" placeholder="Confirm password..." required></input>
+                  <i class="fa fa-check-circle-o" style="font-size:36px; position: relative;top:10px;" id="check_logo"
+                    aria-hidden=" true"></i>
                 </div>
               </td>
             </tr>
@@ -123,14 +126,11 @@
         <br><br><br>
 
         <!--profile upload -->
-        <div class="profile-container">
-          <input type="file" name="file_upload" value="" />
-          <br>
-          <div class="profile-image-container">
-
-            <button type="button" onclick="
-            "><img id="profileImg" src="#"></button>
-          </div>
+        <br>
+        <div class="profile-image-container">
+          <img id="profileImg" src="/images/default_img.png">
+          <input id="imgUpload" type="file" name="profile_photo" placeholder="Photo" required />
+          <label for="imgUpload" id="upload_btn">Choose profile</label>
         </div>
         <div class="hr-text">
           <span>
@@ -398,7 +398,7 @@
                   <label for="learn"><b>
                       What are the cuisines you are <br />interested of learning?
                     </b></label>
-                  <br><br />
+                  <br>
                   <input type="text" name="learn" size="30" placeholder="ex. italian, greek, etc. "></input>
                 </div>
               </td>
@@ -411,7 +411,11 @@
               Biography
             </b></label>
           <br><br>
-          <textarea cols="50" rows="4" placeholder="Tell us about yourself..."></textarea>
+          <textarea cols="50" rows="4" name="biography" placeholder="Tell us about yourself..."></textarea>
+        </div>
+        <!-- terms & conditions -->
+        <div class="terms-container">
+          <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
         </div>
         <!-- submit Button -->
         <button type="submit" class="submit-button" form="infoForm" value="Submit"><b>Submit</b></button>
