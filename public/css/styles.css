@@ -210,8 +210,8 @@ input[type="file"] {
 }
 
 .profile-image-container {
-  bottom: 30rem;
-  position: relative;
+  bottom: 70rem;
+  /* position: relative; */
   left: 980px;
   position: absolute;
   transform: translate(10%, 0%);
