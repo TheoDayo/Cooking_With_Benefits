@@ -13,9 +13,15 @@ font-family: 'Poppins', sans-serif;
 */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-html,
+/* html,
 body {
   max-width: 100%;
+  
+} */
+html,
+body {
+  width: 100vw;
+  height: 100vh;
   overflow-x: hidden;
 }
 
