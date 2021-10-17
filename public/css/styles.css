@@ -6,7 +6,7 @@ Primary:
 -Orange: #FFAF00
 
 Background:
--Soft green: #FFF9ED
+-Soft green: #e1fff4
 
 Hover:
 -Dark Green: #00cc81
@@ -22,15 +22,10 @@ font-family: 'Poppins', sans-serif;
 */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-/* html,
-body {
-  max-width: 100%;
-  
-} */
 html,
 body {
-  width: 100vw;
-  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -183,7 +178,7 @@ input[type="radio"]:checked {
 
 /* dropdowns*/
 .select-nationality {
-  position: absolute;
+  position: relative;
   width: 300px;
   border: 2px solid #bababa;
   height: auto;
@@ -191,7 +186,7 @@ input[type="radio"]:checked {
   overflow: auto;
 }
 .select-specialization {
-  position: absolute;
+  position: relative;
   width: 300px;
   border: 2px solid #bababa;
   height: auto;
