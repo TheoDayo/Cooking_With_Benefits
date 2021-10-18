@@ -1,24 +1,26 @@
 /* 
-COLOR SCHEME:
+COLOR SCHEME.
 
 Primary:
--Bright Green: #00FFA2
 -Orange: #FFAF00
-
-Background:
--Soft green: #e1fff4
+-Red: #FF7D7D
+-Pink: #FDA5FF
 
 Hover:
--Dark Green: #00cc81
--Bright Green: #00FFA2
+Darker orange: #EAA000
+Darker red: #E37272
+Darker pink: #F1A3F2
+
+Background:
+Subtle white: #FFFDFA
 
 Border or text:
 -Soft grey: #F3F3F3
 -Grey: #BABABA 
-*/
-
-/* Poppins font 
+-----------------------------------
+POPPINS FONT.
 font-family: 'Poppins', sans-serif;
+-----------------------------------
 */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
