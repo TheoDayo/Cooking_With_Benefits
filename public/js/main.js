@@ -5,24 +5,22 @@ $(document).ready(function () {
       $("#check_logo").css("color", "#00ffa2");
     } else $("#check_logo").css("color", "red");
   });
-
-  $(".profile-image-container").mouseenter(function () {
+  $(".form-profile").mouseenter(function () {
     $("#upload_btn").css("display", "block");
   });
-  $(".profile-image-container").mouseleave(function () {
+  $(".form-profile").mouseleave(function () {
     $("#upload_btn").css("display", "none");
   });
 
   window.addEventListener("load", function () {
     document
-      .querySelector("#imgUpload")
+      .querySelector("#img-upload")
       .addEventListener("change", function () {
         if (this.files && this.files[0]) {
-          var img = document.querySelector("#profileImg");
+          var img = document.querySelector("#profile-img");
           img.onload = () => {
             URL.revokeObjectURL(img.src);
           };
-
           img.src = URL.createObjectURL(this.files[0]);
         }
       });
