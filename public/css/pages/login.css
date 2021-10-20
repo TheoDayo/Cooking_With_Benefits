@@ -3,9 +3,9 @@
 html,
 body {
   box-sizing: border-box;
+  height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #e1fff4;
 }
 
 /* top navbar */
@@ -14,7 +14,7 @@ a,
 button {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -24,7 +24,7 @@ header {
   justify-content: flex-end;
   align-items: center;
   padding: 5px 10%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .logo {
@@ -59,10 +59,37 @@ button {
   border-radius: 0.6rem;
   cursor: pointer;
   transition: all 0.5s ease 0s;
-  float: right;
   margin-left: 1.6rem;
-  color: white;
+  color: #333;
 }
 button:hover {
   background-color: #00cc81;
+}
+
+/* background */
+.bg {
+  background-image: url("/public/images/cookingfriends/group-table.jpg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* connect btn */
+.connect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 70%;
+  left: 37%;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  text-align: center;
+  color: #00ffa2;
 }
