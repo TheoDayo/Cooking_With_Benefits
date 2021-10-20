@@ -5,11 +5,10 @@ $(document).ready(function () {
       $("#check_logo").css("color", "#00ffa2");
     } else $("#check_logo").css("color", "red");
   });
-
-  $(".profile-image-container").mouseenter(function () {
+  $(".form-profile").mouseenter(function () {
     $("#upload_btn").css("display", "block");
   });
-  $(".profile-image-container").mouseleave(function () {
+  $(".form-profile").mouseleave(function () {
     $("#upload_btn").css("display", "none");
   });
 
@@ -22,7 +21,6 @@ $(document).ready(function () {
           img.onload = () => {
             URL.revokeObjectURL(img.src);
           };
-
           img.src = URL.createObjectURL(this.files[0]);
         }
       });
