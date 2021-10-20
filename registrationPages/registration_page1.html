@@ -12,6 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/public/js/main.js"></script>
     <title>Register</title>
+    <base href="/">
 </head>
 
 <body>
@@ -29,14 +30,14 @@
                 <label for="firstName"><b>Name:&emsp;</b></label>
                 <input type="text" name="firstName" size="30" placeholder="First Name" required></input>
                 <input type="text" name="lastName" size="30" placeholder="Last Name" required></input>
-                <br><br>
+                <br><br><br>
             </div>
 
             <!-- email -->
             <div class=" email-container" id="block">
                 <label for="email"><b>E-mail:&emsp;</b></label>
                 <input type="email" name="email" style="width:576px;" placeholder=" E-mail" required></input>
-                <br><br>
+                <br><br><br>
             </div>
             <!-- password -->
             <div class="password-container" id="block">
@@ -47,14 +48,14 @@
                     maxlength="16" placeholder="Confirm password" required></input>
                 <!-- <i class="fa fa-check-circle-o" style="font-size:36px; position: relative; left: 470px;bottom: 33px;"
                     id="check_logo" aria-hidden=" true"></i> -->
-                <br><br>
+                <br><br><br>
             </div>
 
             <!-- birthday -->
             <div class="birthday-container" id="block">
                 <label for="birthday"><b>Birthday:&emsp;</b></label>
                 <input type="date" name="date" style="width:576px; color: gray;" required></input>
-                <br><br>
+                <br><br><br>
             </div>
             <!-- gender -->
             <div class="gender-rdbtn-group" id="block">
@@ -69,9 +70,9 @@
         </div>
         <!-- profile picture -->
         <div class="form-profile">
-            <img id="profileImg" src="/public/images/default_img.png">
-            <input id="imgUpload" type="file" name="profile_photo" placeholder="Photo" required />
-            <label for="imgUpload" id="upload_btn">Choose profile</label>
+            <img id="profile-img" src="/public/images/default_img.png">
+            <input id="img-upload" type="file" name="profile_photo" placeholder="Photo" required />
+            <label for="img-upload" id="upload_btn">Choose profile</label>
         </div>
     </form>
 </body>

@@ -14,10 +14,10 @@ $(document).ready(function () {
 
   window.addEventListener("load", function () {
     document
-      .querySelector("#imgUpload")
+      .querySelector("#img-upload")
       .addEventListener("change", function () {
         if (this.files && this.files[0]) {
-          var img = document.querySelector("#profileImg");
+          var img = document.querySelector("#profile-img");
           img.onload = () => {
             URL.revokeObjectURL(img.src);
           };
