@@ -63,7 +63,6 @@ input[type="file"] {
 }
 .form-profile {
   bottom: 43rem;
-  /* position: relative; */
   left: 1080px;
   position: absolute;
   transform: translate(10%, 0%);
@@ -75,6 +74,7 @@ input[type="file"] {
   overflow: hidden;
   border: 3px solid white;
 }
+/* profile design */
 #profile-img {
   width: 300px;
   height: 300px;
@@ -91,4 +91,10 @@ input[type="file"] {
   color: white;
   font-family: sans-serif;
   cursor: pointer;
+}
+/* buttons */
+input[type="button"] {
+  top: 10px;
+  position: relative;
+  width: 50px;
 }
