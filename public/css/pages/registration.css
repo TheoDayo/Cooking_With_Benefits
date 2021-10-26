@@ -5,6 +5,7 @@ body {
 }
 /* inputs and labels */
 label {
+  color: black;
   position: relative;
   display: inline-block;
   font-size: large;
@@ -13,6 +14,7 @@ label {
   font-weight: 400;
 }
 input {
+  color: black;
   background-color: #f3f3f3;
   border: 2px solid #dcdcdc;
   padding: 18px;
@@ -22,7 +24,7 @@ input {
   position: relative;
 }
 input:hover {
-  border: 2px solid #00ffa2;
+  border: 2px solid #ffaf00;
 }
 input[type="file"] {
   display: none;
@@ -52,14 +54,10 @@ input[type="file"] {
   background-color: pink;
 }
 .form-profile {
-  bottom: 43rem;
-  left: 1080px;
+  top: 250px;
+  left: 130rem;
   position: absolute;
-  transform: translate(10%, 0%);
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid white;
@@ -121,10 +119,96 @@ input[type="file"] {
   cursor: pointer;
 }
 /* buttons */
-input[type="button"] {
-  top: 10px;
+/* gender buttons */
+input[type="radio"] {
   position: relative;
-  width: 50px;
+  vertical-align: text-bottom;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-clip: content-box;
+  border: 2px #ffaf00;
+  background-color: #bababa;
+  border-radius: 50%;
+}
+input[type="radio"]:checked {
+  background-color: #ffaf00;
+}
+
+.gender-container > #gender-label {
+  text-align: left;
+}
+/* dropdowns*/
+.nationality-container {
+  padding-left: 10px;
+}
+
+.select-dislikes {
+  position: relative;
+  width: 350px;
+  border: 2px solid #bababa;
+  font-size: 15px;
+  overflow: auto;
+  color: black;
+  background-color: #f3f3f3;
+  padding: 5px;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+option {
+  font-weight: normal;
+  display: block;
+  white-space: nowrap;
+  min-height: 1.2em;
+  padding: 0px 2px 1px;
+}
+.select-nationality {
+  position: relative;
+  width: 300px;
+  border: 2px solid #bababa;
+  height: auto;
+  font-size: 15px;
+  overflow: auto;
+  color: black;
+  background-color: #f3f3f3;
+  padding: 5px;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+}
+#select-dislikes {
+  position: relative;
+  border: 2px solid #bababa;
+  height: auto;
+  font-size: 15px;
+  overflow: auto;
+  color: black;
+  background-color: #f3f3f3;
+  padding: 5px;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+}
+/* submit button */
+.submit-button {
+  position: relative;
+  color: white;
+  padding: 0;
+  left: 725px;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.8rem;
+  padding-bottom: 15px;
+  position: relative;
+  text-align: center;
+  width: 345px;
+  box-sizing: content-box;
+  background: linear-gradient(
+    90deg,
+    rgba(253, 165, 246, 255) 0%,
+    rgba(255, 175, 0, 1) 100%
+  );
 }
 .btns {
   display: flex;
