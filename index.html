@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/css/default.css">
     <link rel="stylesheet" href="/public/css/pages/index.css" />
     <title>Cooking With Benefits</title>
     <link rel="icon" type="image/png" href="/public/images/CWB logo.png" />
@@ -14,7 +15,7 @@
     <!-- top nav bar -->
     <div class="bg">
       <header class="top-nav-bar">
-        <img src="/public/images/logo/logo-title.png" class="logo" />
+        <a class="logo" href="index.html"><img src="/public/images/logo/logo-title.png" class="logo" /></a>
         <nav>
           <ul class="nav-links">
             <li><a href="#">Products</a></li>
@@ -35,7 +36,7 @@
     <div class="popup" id="myForm">
       <div class="close-btn" onclick="closeForm()">&times;</div>
       <div class="login-form">
-        <h3>Login</h3>
+        <h4>Login</h4>
         <div class="form-element">
           <label for="email">Email</label>
           <input type="text" id="email" placeholder="Enter email" />
@@ -43,16 +44,16 @@
         <div class="form-element">
           <label for="password">Password</label>
           <input type="password" id="password" placeholder="Enter password" />
-          <a href="#" id="forgot-password"> Forgot password?</a>
+          <a href="#" class="subtext" id="forgot-password"> Forgot password?</a>
         </div>
         <div class="form-element">
           <input type="checkbox" id="remember-me" />
-          <label for="remember-me">Remember me</label>
+          <label class="subtext" for="remember-me">Remember me</label>
         </div>
         <div class="form-element">
           <button class="login-btn">LOG IN</button>
         </div>
-          <p>Don't have an account?<a class="create-account" href="#"> Create an account!</a></p>
+          <p class="subtext">Don't have an account?<a class="create-account subtext" href="#"> Create an account!</a></p>
         </div>
       </div>
     </div>

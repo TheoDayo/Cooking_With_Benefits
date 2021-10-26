@@ -1,73 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
-html,
-body {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-}
-
-/* top navbar */
-li,
-.top-nav-bar a,
-button {
-  font-size: 1rem;
-  color: white;
-  text-decoration: none;
-}
-
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 5px 10%;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.logo {
-  cursor: pointer;
-  width: 20rem;
-  height: auto;
-  margin-right: auto;
-  padding: 0.5rem 0;
-}
-
-.nav-links {
-  list-style: none;
-}
-.nav-links li {
-  display: inline-block;
-  padding: 0 1rem;
-  margin-right: auto;
-}
-.nav-links li a {
-  transition: all 0.5s ease 0s;
-}
-.nav-links li a:hover {
-  color: #00ffa2;
-  cursor: pointer;
-}
-
-button {
-  display: block;
-  padding: 0.7rem 1.8rem;
-  background-color: #00ffa2;
-  border: none;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  transition: all 0.5s ease 0s;
-  color: #333;
-}
-.top-nav-bar button {
-  margin-left: 1.6rem;
-}
-button:hover {
-  background-color: #00cc81;
-}
-
 /* background */
 .bg {
   background-image: url("/public/images/cookingfriends/group-table.jpg");
@@ -76,6 +6,14 @@ button:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* top navbar */
+.top-nav-bar {
+  background-color: rgba(0, 0, 0, 0);
+}
+.top-nav-bar a {
+  color: white;
 }
 
 /* connect btn */
@@ -91,10 +29,8 @@ button:hover {
 }
 
 h1 {
-  font-family: "Poppins", sans-serif;
   font-style: italic;
   text-align: center;
-  color: #00ffa2;
 }
 
 /* Login popup */
@@ -103,12 +39,16 @@ h1 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1.25);
+  transform: translate(-50%, -50%);
   width: 24rem;
   padding: 1rem 2rem;
   background: #fff;
   box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
   border-radius: 0.8rem;
+}
+
+h4 {
+  text-align: center;
 }
 
 .popup .close-btn {
@@ -135,23 +75,18 @@ h1 {
 }
 label {
   font-size: 1rem;
-  color: #333;
 }
 
 input[type="text"],
 input[type="password"] {
   margin-top: 5px;
   display: block;
-  width: 93%;
+  width: 100%;
   padding: 0.8rem;
   outline: none;
   border: 1px solid #aaa;
   border-radius: 5px;
   margin-right: 10rem;
-}
-
-input[type="checkbox"] {
-  margin-right: 5px;
 }
 
 .login-btn {
@@ -160,9 +95,6 @@ input[type="checkbox"] {
 }
 
 #forgot-password {
-  margin-top: 1rem;
-  font-size: 1rem;
-  text-align: end;
   float: right;
 }
 

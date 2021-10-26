@@ -1,9 +1,163 @@
+/* 
+COLOR SCHEME.
+Primary:
+Primary:
+
+- Green: #00FFA2
+
+Secondary:
+- Slug green: #A1DE53
+- Orange: #FFAF00
+
+Hover:
+- Darker green: #00cc81
+- Darker slug green: #8CC346
+- Darker orange: #EAA000
+
+Background:
+- Subtle pink: #FFFDFA
+
+Border or text:
+- Soft grey: #F3F3F3
+- Grey: #dcdcdc
+-----------------------------------
+POPPINS FONT.
+font-family: 'Poppins', sans-serif;
+-----------------------------------
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 html,
 body {
-  box-sizing: border-box;
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff9ff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+* {
+  color: #333;
   margin: 0;
   padding: 0;
+  border: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  background-color: #fff9ff;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font size */
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+  margin: 0 0.1rem;
+}
+
+p,
+li,
+button,
+option {
+  font-size: 1rem;
+}
+
+.subtext {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+/* font color and weight*/
+
+h1,
+h2,
+h3,
+h4 {
+  color: #00ffa2;
+  font-weight: 700;
+}
+
+/* top navbar */
+.top-nav-bar a,
+li,
+i,
+button {
+  color: #00ffa2;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px 10%;
+  background-color: white;
+  height: 4rem;
+}
+
+.logo {
+  cursor: pointer;
+  width: 20rem;
+  height: auto;
+  margin-right: auto;
+  padding: 0.5rem 0.5rem;
+}
+
+.nav-links {
+  list-style: none;
+}
+.nav-links li {
+  display: inline-block;
+  padding: 0 1rem;
+  margin-right: auto;
+}
+i,
+.nav-links li a {
+  transition: all 0.5s ease 0s;
+}
+i:hover,
+.nav-links li a:hover {
+  color: #00cc81;
+  cursor: pointer;
+}
+
+button {
+  display: block;
+  padding: 0.7rem 1.8rem;
+  background-color: #00ffa2;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+  color: #333;
+}
+
+.top-nav-bar button {
+  margin-left: 1.6rem;
+}
+button:hover {
+  background-color: #00cc81;
 }

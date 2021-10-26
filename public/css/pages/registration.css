@@ -1,20 +1,8 @@
 html,
 body {
-  width: 100vw;
-  height: 100vh;
   overflow-x: hidden;
   position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /* inputs and labels */
 label {
   position: relative;
@@ -22,10 +10,11 @@ label {
   font-size: large;
   width: 140px;
   text-align: right;
+  font-weight: 400;
 }
 input {
   background-color: #f3f3f3;
-  border: 2px solid #bababa;
+  border: 2px solid #dcdcdc;
   padding: 18px;
   border-radius: 8px;
   font-family: "Poppins", sans-serif;
@@ -38,9 +27,9 @@ input:hover {
 input[type="file"] {
   display: none;
 }
+
 /* header bar */
 .header-bar {
-  font-family: "Poppins", sans-serif;
   font-weight: 900;
   margin: auto;
   padding: 20px;
@@ -48,9 +37,9 @@ input[type="file"] {
   position: relative;
   width: 60%;
 }
-/* div design */
+
+/* div design page 1*/
 .form-header {
-  color: #ffaf00;
   position: [absolute];
   padding-top: 10%;
 }
@@ -60,6 +49,7 @@ input[type="file"] {
   text-align: left;
   padding-left: 350px;
   padding-top: 70px;
+  background-color: pink;
 }
 .form-profile {
   bottom: 43rem;
@@ -74,6 +64,44 @@ input[type="file"] {
   overflow: hidden;
   border: 3px solid white;
 }
+/* div design page 3-4 */
+.wrapper {
+  display: flex;
+  position: fixed;
+  width: 1024px;
+  padding: 1rem 2rem;
+  top: 23rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  justify-content: center;
+}
+.category {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.category div {
+  height: 20rem;
+  padding: 0.5rem 2rem 8rem 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.select-nationality {
+  position: relative;
+  top: 1rem;
+  width: 14rem;
+  padding: 1rem 4rem;
+  border: 2px solid #dcdcdc;
+  border-radius: 10px;
+  height: auto;
+  overflow: auto;
+}
+.cooking,
+.baking {
+  border-right: 1px solid #a3a3a3;
+}
+
 /* profile design */
 #profile-img {
   width: 300px;
@@ -97,4 +125,38 @@ input[type="button"] {
   top: 10px;
   position: relative;
   width: 50px;
+}
+.btns {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  clear: both;
+}
+.skip-btn,
+.continue-btn {
+  margin: 5rem 2rem 0 2rem;
+  width: 16rem;
+}
+
+.skip-btn {
+  background-color: #f3f3f3;
+  border: 1px solid #dcdcdc;
+  color: #a3a3a3;
+}
+.skip-btn:hover {
+  background-color: #e6e6e6;
+}
+
+/* text */
+.optional {
+  color: #a3a3a3;
+}
+.category h4 {
+  font-style: italic;
+}
+li,
+i,
+button {
+  color: #333;
 }
