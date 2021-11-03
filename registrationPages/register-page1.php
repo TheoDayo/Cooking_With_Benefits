@@ -62,7 +62,7 @@ if(isset($_POST['submit-info'])){
         <a class="logo" href="index.html"><img src="Cooking_with_Benefits/public/images/logo/logo-title.png" class="logo" /></a>
     </header>
 
-    <form action="/Cooking_with_Benefits/registrationPages/register-page1.php" method="post" id="registration-form">
+    <form action="/Cooking_with_Benefits/registrationPages/register-page1.php" method="POST" id="registration-form" enctype = "multipart/form-data">
         <div class="form-header">
             <h1 class="header-bar">Register</h1>
             <div class="form-info">
@@ -112,7 +112,7 @@ if(isset($_POST['submit-info'])){
                 <br><br><br>
                 <!-- profile picture -->
                 <div class="form-profile">
-                    <img id="profile-img" src="Cooking_with_Benefits/public/images/default_img.png">
+                    <img id="profile-img" src="/Cooking_with_Benefits/public/images/default_img.png">
                     <input id="img-upload" type="file" name="profile_photo" placeholder="Photo" />
                     <label for="img-upload" id="upload_btn">Choose profile</label>
                 </div>

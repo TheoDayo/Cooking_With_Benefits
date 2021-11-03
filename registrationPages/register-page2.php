@@ -23,10 +23,10 @@
 </head>
 
 <body>
-  <!-- top navigation bar -->
-  <div class="top-nav-bar">
-
-  </div>
+    <!-- top navigation bar -->
+    <header class="top-nav-bar">
+        <a class="logo" href="index.html"><img src="Cooking_with_Benefits/public/images/logo/logo-title.png" class="logo" /></a>
+    </header>
   <form action="" method="get" id="registration-form">
     <div class="form-header">
       <h1 style="position: relative; text-align: center;">Details(Optional)</h1>
