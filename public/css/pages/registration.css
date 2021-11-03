@@ -130,12 +130,12 @@ input[type="radio"] {
   width: 20px;
   height: 20px;
   background-clip: content-box;
-  border: 2px #ffaf00;
+  border: 2px pink;
   background-color: #bababa;
   border-radius: 50%;
 }
 input[type="radio"]:checked {
-  background-color: #ffaf00;
+  background-color: pink;
 }
 
 .gender-container > #gender-label {

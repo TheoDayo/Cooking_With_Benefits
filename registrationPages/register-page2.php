@@ -15,8 +15,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
   <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
   <!-- js and css -->
-  <link rel="stylesheet" href="/public/css/pages/registration.css">
-  <script type="module" src="/public/js/main.js"></script>
+  <link rel="stylesheet" href="../public/css/pages/registration.css">
+  <script type="module" src="../public/js/main.js"></script>
   </link>
   <title>Other Details</title>
   <base href="/">
