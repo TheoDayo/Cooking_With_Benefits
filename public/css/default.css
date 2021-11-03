@@ -26,7 +26,7 @@ font-family: 'Poppins', sans-serif;
 -----------------------------------
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;1,100;1,300;1,400;1,600&display=swap");
 
 html,
 body {
@@ -82,6 +82,7 @@ li,
 button,
 option {
   font-size: 1rem;
+  font-weight: normal;
 }
 
 .subtext {
@@ -98,6 +99,10 @@ h3,
 h4 {
   color: #00ffa2;
   font-weight: 700;
+}
+
+span {
+  font-weight: 300;
 }
 
 /* top navbar */
@@ -117,6 +122,7 @@ header {
   padding: 5px 10%;
   background-color: white;
   height: 4rem;
+  border-bottom: 1px solid #dcdcdc;
 }
 
 .logo {

@@ -1,16 +1,14 @@
 /* containers */
 .container {
   height: auto;
-  max-width: 1024px;
+  max-width: 935px;
   margin: 0 auto;
   background: hotpink;
   display: flex;
   flex-wrap: wrap;
 }
-
 .container > div {
   width: 100%;
-  /* temp */
   margin-bottom: 2rem;
   padding: 2rem;
 }
@@ -19,10 +17,23 @@
   height: 0;
 }
 
+/* profile image */
+.profile-image {
+  width: 11rem;
+  position: relative;
+  margin: 0 4rem 0 2rem;
+  float: left;
+}
+.prof-img {
+  width: 100%;
+  display: flex;
+  border-radius: 100px;
+}
 /* profile-details */
 .profile-details {
   background-color: white;
   flex-direction: row;
+  height: 500px;
 }
 .details-right {
   height: 18rem;
@@ -30,19 +41,19 @@
   flex-direction: column;
 }
 .profile-top {
-  background-color: brown;
+  /* background-color: brown; */
   display: flex;
   float: left;
   align-items: center;
   justify-content: flex-start;
   flex-direction: row;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
 }
 .profile-top > div {
   margin: 0 0.5rem;
 }
 .name-age {
-  background-color: bisque;
+  /* background-color: bisque; */
 }
 .profile-middle {
   display: flex;
@@ -53,31 +64,79 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: bisque;
+  /* background-color: bisque; */
 }
 .icon1-text,
 .icon2-text {
-  width: 8rem;
+  min-width: 8rem;
+  max-width: 28rem;
   display: flex;
   flex-direction: column;
-  background-color: bisque;
+  /* background-color: bisque; */
   margin-left: 0.1rem;
   line-height: 2rem;
 }
-/* profile image */
-.profile-image {
-  width: 9rem;
+.bio {
+  margin-top: 1rem;
+  width: 90%;
+}
+/* table */
+table {
+  margin: 0.8rem;
+  border-collapse: collapse;
+  max-width: 85%;
+}
+th,
+td {
+  text-align: center;
+  padding: 0 1rem;
+  line-height: 1.6rem;
+}
+.column1 {
+  padding-left: 0;
+  width: 1rem;
+}
+.column2,
+.column3 {
+  border-left: 1px solid #dcdcdc;
+  padding: 0 1rem;
+}
+.row2 > td {
+  color: #ffaf00;
+}
+.row3 > td {
+  color: #a1de53;
+}
+.row4 > td {
+  color: #00ffa2;
+}
+/* recipes-followers-following */
+.recipes-followers-following {
   position: relative;
-  margin: 0 5rem 0 2rem;
-  float: left;
+  top: -4.2rem;
+  left: 3.8rem;
+  width: 8rem;
+  text-align: center;
 }
-
-img {
-  width: 100%;
-  display: block;
-  border-radius: 100px;
+/* divider */
+hr {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dcdcdc;
 }
-
+/* profile navbar */
+.lower-navbar {
+  margin: 0 auto;
+  padding: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10%;
+}
+.lower-navbar li {
+  list-style: none;
+}
 /* recipe-list */
 .recipe-list {
   background-color: bisque;
@@ -91,4 +150,7 @@ img {
   color: #555;
   margin: 0 0.5rem;
   line-height: 2rem;
+}
+.profile-details i:hover {
+  color: rgb(39, 39, 39);
 }
