@@ -29,27 +29,21 @@ if(isset($_POST['submit-info'])){
 
 }
 
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- font bootstrap -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/css/pages/registration.css">
     <link rel="stylesheet" href="../public/css/default.css">
-    <!-- jquery -->
+    <!-- jquery --> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- js and css -->
-    <link rel="stylesheet" href="../public/css/pages/registration.css">
+    <!-- <link rel="stylesheet" href="../public/css/pages/registration.css"> -->
     <script type="module" src="../public/js/main.js"></script>
     <title>Register</title>
     <link rel="icon" type="image/png" href="Cooking_with_Benefits/public/images/CWB logo.png" />
@@ -57,14 +51,15 @@ if(isset($_POST['submit-info'])){
 </head>
 
 <body>
-    <!-- top navigation bar -->
-    <header class="top-nav-bar">
-        <a class="logo" href="index.html"><img src="Cooking_with_Benefits/public/images/logo/logo-title.png" class="logo" /></a>
+    <header id="page1-header">
+      <a id="logo-bar" href="index.html"
+        ><img src="Cooking_with_Benefits/public/images/logo/logo-title.png" id="logo-bar"
+      /></a>
     </header>
-
-    <form action="/Cooking_with_Benefits/registrationPages/register-page1.php" method="POST" id="registration-form" enctype = "multipart/form-data">
+    <form action="/Cooking_with_Benefits/registrationPages/register-page2.php" method="POST" id="registration-form" enctype = "multipart/form-data">
         <div class="form-header">
             <h1 class="header-bar">Register</h1>
+        </div>
             <div class="form-info">
                 <!-- firstname -->
                 <div class="name-container" id="block">
@@ -112,12 +107,13 @@ if(isset($_POST['submit-info'])){
                 <br><br><br>
                 <!-- profile picture -->
                 <div class="form-profile">
-                    <img id="profile-img" src="/Cooking_with_Benefits/public/images/default_img.png">
+                    <img id="profile-img" src="Cooking_with_Benefits/public/images/default_img.png">
                     <input id="img-upload" type="file" name="profile_photo" placeholder="Photo" />
                     <label for="img-upload" id="upload_btn">Choose profile</label>
                 </div>
             </div>
 
+        <br>
             <a href = "Cooking_with_Benefits/registrationPages/register-page2.php"><input type="submit" class="submit-button" name ="submit-info" value="Continue" form="registration-form"></a>
 
     </form>
