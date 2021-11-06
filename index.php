@@ -9,8 +9,6 @@
     <title>Cooking With Benefits</title>
     <link rel="icon" type="image/png" href="./public/images/CWB logo.png" />
     <!-- <script src="/public/js/index.js"></script> -->
-  </head>
-
   <body>
     <!-- top nav bar -->
     <div class="bg">
