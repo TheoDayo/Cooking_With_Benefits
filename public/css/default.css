@@ -141,10 +141,7 @@ header {
   padding: 0 1rem;
   margin-right: auto;
 }
-i,
-.nav-links li a {
-  transition: all 0.5s ease 0s;
-}
+
 i:hover,
 .nav-links li a:hover {
   color: #00cc81;
@@ -158,7 +155,6 @@ button {
   border: none;
   border-radius: 0.6rem;
   cursor: pointer;
-  transition: all 0.5s ease 0s;
   color: #333;
 }
 
