@@ -124,6 +124,10 @@ header {
   height: 4rem;
   border-bottom: 1px solid #dcdcdc;
 }
+.header-bar {
+  text-align: center;
+  font-size: 50px;
+}
 
 .logo {
   cursor: pointer;

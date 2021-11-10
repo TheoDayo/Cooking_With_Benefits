@@ -1,24 +1,10 @@
 // JQUERY CODES
 $(document).ready(function () {
-  $("#password, #confirm_password").on("keyup", function () {
-    if ($("#password").val() == $("#confirm_password").val()) {
-      $("#check_logo").css("color", "#ffaf00");
-    } else $("#check_logo").css("color", "red");
-  });
-
-  // profile
   $(".form-profile").mouseenter(function () {
     $("#upload_btn").css("display", "block");
   });
   $(".form-profile").mouseleave(function () {
     $("#upload_btn").css("display", "none");
-  });
-
-  new Choices("#select-dislikes", {
-    removeItemButton: true,
-    maxItemCount: 5,
-    searchResultLimit: 5,
-    renderChoiceLimit: 5,
   });
 
   // window.addEventListener("load", function () {

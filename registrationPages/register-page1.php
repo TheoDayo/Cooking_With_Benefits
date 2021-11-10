@@ -9,6 +9,7 @@ if(isset($_POST['submit-info'])){
     $cPassword = md5($_POST['confirm-password']);
     $gender = $_POST['gender'];
     $birth_date = date('Y-m-d', strtotime($_POST['birth_date']));
+
     if($password == $cPassword){
         $sql = "INSERT INTO users (firstName, lastName, email_address, password, gender, birth_date)
         VALUES ('$firstName', '$lastName', '$email_address', '$password', '$gender', '$birth_date')";
@@ -21,7 +22,6 @@ if(isset($_POST['submit-info'])){
 
         }else{
             echo "<script>alert('Something went wrong!')</script>";
-
         }
     } else{
         echo"<script>alert('Password incorrect!')</script>";
@@ -39,11 +39,8 @@ if(isset($_POST['submit-info'])){
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/css/pages/registration.css">
     <link rel="stylesheet" href="../public/css/default.css">
-    <!-- jquery --> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <!-- js and css -->
-    <!-- <link rel="stylesheet" href="../public/css/pages/registration.css"> -->
     <script type="module" src="../public/js/main.js"></script>
     <title>Register</title>
     <link rel="icon" type="image/png" href="Cooking_with_Benefits/public/images/CWB logo.png" />
@@ -56,9 +53,10 @@ if(isset($_POST['submit-info'])){
         ><img src="Cooking_with_Benefits/public/images/logo/logo-title.png" id="logo-bar"
       /></a>
     </header>
+    <!-- Form -->
     <form action="/Cooking_with_Benefits/registrationPages/register-page2.php" method="POST" id="registration-form" enctype = "multipart/form-data">
         <div class="form-header">
-            <h1 class="header-bar">Register</h1>
+        <h1 class="header-bar">Register</h1>
         </div>
             <div class="form-info">
                 <!-- firstname -->
@@ -72,7 +70,7 @@ if(isset($_POST['submit-info'])){
                 <!-- email -->
                 <div class=" email-container" id="block">
                     <label for="email"><b>E-mail:&emsp;</b></label>
-                    <input type="email" name="email" style="width:576px;" placeholder=" E-mail" required></input>
+                    <input type="email" name="email" style="width:560px; padding: -4rem;" placeholder=" E-mail" required></input>
                     <br><br><br>
                 </div>
                 <!-- password -->
@@ -82,16 +80,13 @@ if(isset($_POST['submit-info'])){
                         maxlength="16" required></input>
                     <input type="password" name="confirm-password" id="confirm_password" size="30" minlength="6"
                         maxlength="16" placeholder="Confirm password" required></input>
-                    <i class="fa fa-check-circle-o"
-                        style="font-size:30px;color: gray; position: relative; left: 2px;bottom: -10px;" id="check_logo"
-                        aria-hidden=" true"></i>
                     <br><br><br>
                 </div>
 
                 <!-- birthday -->
                 <div class="birthday-container" id="block">
                     <label for="birthday"><b>Birthday:&emsp;</b></label>
-                    <input type="date" name="birth_date" style="width:576px; color: gray;" required></input>
+                    <input type="date" name="birth_date" style="width:560px; color: gray;" required></input>
                     <br><br><br>
                 </div>
                 <!-- gender -->

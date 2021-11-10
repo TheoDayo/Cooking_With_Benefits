@@ -75,9 +75,9 @@ input[type="file"] {
   position: relative;
   top: 1rem;
   width: 14rem;
-  padding: 1rem 4rem;
+  padding: 10px;
   border: 2px solid #dcdcdc;
-  border-radius: 10px;
+  border-radius: 5px;
   height: auto;
   overflow: auto;
 }
@@ -121,18 +121,15 @@ input[type="radio"] {
   border-radius: 50%;
 }
 input[type="radio"]:checked {
-  background-color: white;
+  background-color: pink;
 }
 
 .gender-container > #gender-label {
   text-align: left;
 }
 /* dropdowns*/
-.nationality-container {
-  padding-left: 10px;
-}
-
 .select-dislikes {
+  display: inline-block;
   position: relative;
   width: 350px;
   border: 2px solid #bababa;
@@ -151,9 +148,20 @@ option {
   min-height: 1.2em;
   padding: 0px 2px 1px;
 }
-.select-nationality {
+option:hover,
+option:focus,
+option:checked {
+  background-color: #00ffa2;
+}
+/* biography-container */
+.bio-container {
+  position: fixed;
+  left: 1000px;
+  bottom: 620px;
+}
+
+/* #select-dislikes {
   position: relative;
-  width: 300px;
   border: 2px solid #bababa;
   height: auto;
   font-size: 15px;
@@ -163,19 +171,7 @@ option {
   padding: 5px;
   border-radius: 8px;
   font-family: "Poppins", sans-serif;
-}
-#select-dislikes {
-  position: relative;
-  border: 2px solid #bababa;
-  height: auto;
-  font-size: 15px;
-  overflow: auto;
-  color: black;
-  background-color: #f3f3f3;
-  padding: 5px;
-  border-radius: 8px;
-  font-family: "Poppins", sans-serif;
-}
+} */
 /* submit button */
 .submit-button {
   position: relative;
@@ -202,6 +198,14 @@ option {
   justify-content: center;
   clear: both;
 }
+/* page 2 buttons */
+.btns-page2 {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  clear: both;
+}
 .skip-btn,
 .continue-btn {
   margin: 5rem 2rem 0 2rem;
@@ -214,6 +218,15 @@ option {
 }
 .skip-btn:hover {
   background-color: #e6e6e6;
+}
+input > .continue-btn {
+  display: block;
+  padding: 0.7 rem 1.8 rem;
+  background-color: #00ffa2;
+  border: none;
+  border-radius: 0.6 rem;
+  cursor: pointer;
+  color: #333;
 }
 
 /* text */
