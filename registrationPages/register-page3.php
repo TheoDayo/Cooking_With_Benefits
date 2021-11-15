@@ -22,7 +22,8 @@
       /></a>
     </header>
     <div class="wrapper">
-      <form action="registration_page1.php" method="get" id="registration-form">
+  <form action="/Cooking_with_Benefits/registrationPages/register-page4.php" method="POST" id="registration-form"
+    enctype="multipart/form-data">
         <div class="form-subheader">
           <h6 class="subtitle">What are you interested in learning?</h6>
           <h6 class="optional">(Optional)</h6>
@@ -35,7 +36,7 @@
             <select
               multiple="true"
               name="nationality"
-              class="select-nationality mul-select"
+              class="select-cooking mul-select-cooking"
               onmousedown="if(this.options.length>8){this.size=8;}"
               onchange="this.size=0"
               onblur="this.size=0;"
@@ -244,7 +245,7 @@
             <select
               name="nationality"
               multiple="true"
-              class="select-nationality mul-select"
+              class="select-baking mul-select-baking"
               onmousedown="if(this.options.length>8){this.size=8;}"
               onchange="this.size=0"
               onblur="this.size=0;"
@@ -452,7 +453,7 @@
             <select
               multiple="true"
               name="nationality"
-              class="select-nationality mul-select"
+              class="select-mixology mul-select-mixology"
               onmousedown="if(this.options.length>8){this.size=8;}"
               onchange="this.size=0"
               onblur="this.size=0;"
@@ -657,16 +658,30 @@
         </div>
 
         <div class="btns">
-          <button class="skip-btn">Skip</button>
-          <button class="continue-btn">Continue</button>
+      <button class="skip-btn"><a href = "/Cooking_with_Benefits/registrationPages/register-page4.php">Skip</a></button>
+          <button class="continue-btn" type="submit">Continue</button>
         </div>
       </form>
     </div>
 
     <script>
       $(document).ready(function () {
-        $(".mul-select").select2({
-          placeholder: "select nationality", //placeholder
+        $(".mul-select-cooking").select2({
+          placeholder: "select", //placeholder
+          tags: true,
+          tokenSeparators: ["/", ",", ";", " "],
+        });
+      });
+            $(document).ready(function () {
+        $(".mul-select-baking").select2({
+          placeholder: "select", //placeholder
+          tags: true,
+          tokenSeparators: ["/", ",", ";", " "],
+        });
+      });
+            $(document).ready(function () {
+        $(".mul-select-mixology").select2({
+          placeholder: "select", //placeholder
           tags: true,
           tokenSeparators: ["/", ",", ";", " "],
         });

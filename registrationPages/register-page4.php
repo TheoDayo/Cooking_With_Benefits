@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/public/css/default.css" />
-    <link rel="stylesheet" href="/public/css/pages/registration.css" />
-    <link rel="stylesheet" href="/public/css/multi-select.min.css" />
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="../public/css/default.css" />
+    <link rel="stylesheet" href="../public/css/pages/registration.css" />
+    <link rel="stylesheet" href="../public/css/multi-select.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
-
     <title>Register</title>
     <link rel="icon" type="image/png" href="/public/images/CWB logo.png" />
     <base href="/" />
@@ -23,7 +23,8 @@
     </header>
 
     <div class="wrapper">
-      <form action="registration_page1.php" method="get" id="registration-form">
+  <form action="/Cooking_with_Benefits/index.php" method="POST" id="registration-form"
+    enctype="multipart/form-data">
         <div class="form-subheader">
           <h6 class="subtitle">What do you specialize in making?</h6>
           <h6 class="optional">(Optional)</h6>
@@ -36,7 +37,7 @@
             <select
               multiple="true"
               name="nationality"
-              class="select-nationality mul-select"
+              class="specialty-cooking mul-select-spec-cooking"
               onmousedown="if(this.options.length>8){this.size=8;}"
               onchange="this.size=0"
               onblur="this.size=0;"
@@ -245,7 +246,7 @@
             <select
               name="nationality"
               multiple="true"
-              class="select-nationality mul-select"
+              class="specialty-baking mul-select-spec-baking"
               onmousedown="if(this.options.length>8){this.size=8;}"
               onchange="this.size=0"
               onblur="this.size=0;"
@@ -453,7 +454,7 @@
             <select
               multiple="true"
               name="nationality"
-              class="select-nationality mul-select"
+              class="specialty-mixology mul-select-spec-mixology"
               onmousedown="if(this.options.length>8){this.size=8;}"
               onchange="this.size=0"
               onblur="this.size=0;"
@@ -658,16 +659,29 @@
         </div>
 
         <div class="btns">
-          <button class="skip-btn">Skip</button>
-          <button class="continue-btn">Continue</button>
+          <button class="continue-btn">Done</button>
         </div>
       </form>
     </div>
 
     <script>
       $(document).ready(function () {
-        $(".mul-select").select2({
-          placeholder: "select nationality", //placeholder
+        $(".mul-select-spec-cooking").select2({
+          placeholder: "select", //placeholder
+          tags: true,
+          tokenSeparators: ["/", ",", ";", " "],
+        });
+      });
+            $(document).ready(function () {
+        $(".mul-select-spec-baking").select2({
+          placeholder: "select", //placeholder
+          tags: true,
+          tokenSeparators: ["/", ",", ";", " "],
+        });
+      });
+            $(document).ready(function () {
+        $(".mul-select-spec-mixology").select2({
+          placeholder: "select", //placeholder
           tags: true,
           tokenSeparators: ["/", ",", ";", " "],
         });

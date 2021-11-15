@@ -22,10 +22,10 @@
         class="logo" /></a>
   </header>
   <!-- Form -->
-  <form action="/Cooking_with_Benefits/registrationPages/register-page2.php" method="POST" id="registration-form"
+  <form action="/Cooking_with_Benefits/registrationPages/register-page3.php" method="POST" id="registration-form"
     enctype="multipart/form-data">
     <div class="form-subheader" style="text-align:center;">
-      <h6 class="subtitle">What are you interested in learning?</h6>
+      <h6 class="subtitle">Other Details</h6>
       <h6 class="optional">(Optional)</h6>
     </div>
 
@@ -376,8 +376,8 @@
       </div>
     </div>
       <div class="btns-page2" style = "bottom:300px;">
-      <button class="skip-btn"><a href = "Cooking_with_Benefits/registrationPages/register-page3.php">Skip</a></button>
-      <button class="continue-btn">Continue</button>
+      <button class="skip-btn"><a href = "/Cooking_with_Benefits/registrationPages/register-page3.php">Skip</a></button>
+      <button class="continue-btn" type="submit">Continue</button>
     </div>
   </form>
   <script>
