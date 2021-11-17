@@ -153,6 +153,7 @@ option:focus,
 option:checked {
   background-color: #00ffa2;
 }
+
 /* biography-container */
 .bio-container {
   position: fixed;

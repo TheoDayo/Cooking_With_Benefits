@@ -12,19 +12,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
   <title>Register</title>
-  <link rel="icon" type="image/png" href="/public/images/CWB logo.png" />
+  <link rel="icon" type="image/png" href="Cooking_with_Benefits/public/images/CWB logo.png" />
   <base href="/" />
 </head>
 
 <body>
   <header class="top-nav-bar">
-    <a class="logo" href="index.html"><img src="Cooking_With_Benefits/public/images/logo/logo-title.png"
+    <a class="logo" href="index.html"><img src="Cooking_with_Benefits/public/images/logo/logo-title.png"
         class="logo" /></a>
   </header>
   <!-- Form -->
   <form action="/Cooking_with_Benefits/registrationPages/register-page3.php" method="POST" id="registration-form"
     enctype="multipart/form-data">
     <div class="form-subheader" style="text-align:center;">
+    <br>
       <h6 class="subtitle">Other Details</h6>
       <h6 class="optional">(Optional)</h6>
     </div>
@@ -33,8 +34,7 @@
       <div class=" nationality-container" id="block">
         <label for="nationality"><b>Nationality:&emsp;</b></label>
         <select name="nationality" class="select-nationality" id="nationality"
-          style="width:400px; font-size: 15px; top: 0px;" onmousedown="if(this.options.length>8){this.size=8;}"
-          onchange="this.size=0" onblur="this.size=0;">
+          style="width:400px; font-size: 15px; top: 0px;">
           <option value="">-- select one --</option>
           <option value="afghan">Afghan</option>
           <option value="albanian">Albanian</option>
@@ -234,74 +234,20 @@
         <br><br><br>
       </div>
       <div class=" dislikes-container" id="block">
-        <label for="dislikes"><b>Dislikes:&emsp;</b></label>
+        <label for="dislikes"><b><br>Dietary&emsp; Restrictions:&emsp;</b></label>
         <select multiple="true" name="dislikes" class="select-dislikes mul-select-dislikes" id="dislikes"
           style="width:400px;" onmousedown="if(this.options.length>8){this.size=8;}" onchange="this.size=0"
           onblur="this.size=0;">
-          <option value="pakistani">Pakistani</option>
-          <option value="palauan">Palauan</option>
-          <option value="panamanian">Panamanian</option>
-          <option value="papua new guinean">Papua New Guinean</option>
-          <option value="paraguayan">Paraguayan</option>
-          <option value="peruvian">Peruvian</option>
-          <option value="polish">Polish</option>
-          <option value="portuguese">Portuguese</option>
-          <option value="qatari">Qatari</option>
-          <option value="romanian">Romanian</option>
-          <option value="russian">Russian</option>
-          <option value="rwandan">Rwandan</option>
-          <option value="saint lucian">Saint Lucian</option>
-          <option value="salvadoran">Salvadoran</option>
-          <option value="samoan">Samoan</option>
-          <option value="san marinese">San Marinese</option>
-          <option value="sao tomean">Sao Tomean</option>
-          <option value="saudi">Saudi</option>
-          <option value="scottish">Scottish</option>
-          <option value="senegalese">Senegalese</option>
-          <option value="serbian">Serbian</option>
-          <option value="seychellois">Seychellois</option>
-          <option value="sierra leonean">Sierra Leonean</option>
-          <option value="singaporean">Singaporean</option>
-          <option value="slovakian">Slovakian</option>
-          <option value="slovenian">Slovenian</option>
-          <option value="solomon islander">Solomon Islander</option>
-          <option value="somali">Somali</option>
-          <option value="south african">South African</option>
-          <option value="south korean">South Korean</option>
-          <option value="spanish">Spanish</option>
-          <option value="sri lankan">Sri Lankan</option>
-          <option value="sudanese">Sudanese</option>
-          <option value="surinamer">Surinamer</option>
-          <option value="swazi">Swazi</option>
-          <option value="swedish">Swedish</option>
-          <option value="swiss">Swiss</option>
-          <option value="syrian">Syrian</option>
-          <option value="taiwanese">Taiwanese</option>
-          <option value="tajik">Tajik</option>
-          <option value="tanzanian">Tanzanian</option>
-          <option value="thai">Thai</option>
-          <option value="togolese">Togolese</option>
-          <option value="tongan">Tongan</option>
-          <option value="trinidadian or tobagonian">
-            Trinidadian or Tobagonian
-          </option>
-          <option value="tunisian">Tunisian</option>
-          <option value="turkish">Turkish</option>
-          <option value="tuvaluan">Tuvaluan</option>
-          <option value="ugandan">Ugandan</option>
-          <option value="ukrainian">Ukrainian</option>
-          <option value="uruguayan">Uruguayan</option>
-          <option value="uzbekistani">Uzbekistani</option>
-          <option value="venezuelan">Venezuelan</option>
-          <option value="vietnamese">Vietnamese</option>
-          <option value="welsh">Welsh</option>
-          <option value="yemenite">Yemenite</option>
-          <option value="zambian">Zambian</option>
-          <option value="zimbabwean">Zimbabwean</option>
+          <option value="vegetarian">Vegetarian</option>
+          <option value="vegan">Vegan</option>
+          <option value="dairy-free">Dairy-Free</option>
+          <option value="gluten-free">Gluten-free</option>
+          <option value="omnivore">Omnivore</option>
+    
         </select>
         <br><br><br>
       </div>
-      <div class=" allergies-container" id="block">
+      <!-- <div class=" allergies-container" id="block">
         <label for="allergies"><b>Allergies:&emsp;</b></label>
         <select multiple="true" name="allergies" class="select-allergies mul-select-allergies" id="allergies"
           style="width:400px;" onmousedown="if(this.options.length>8){this.size=8;}" onchange="this.size=0"
@@ -368,7 +314,7 @@
           <option value="zimbabwean">Zimbabwean</option>
         </select>
         <br><br><br>
-      </div>
+      </div> -->
       <div class="bio-container">
         <label for="biography"><b>Biography&emsp;</b></label>
         <br>
@@ -383,18 +329,18 @@
   <script>
     $(document).ready(function () {
       $(".mul-select-dislikes").select2({
-        placeholder: "select dislikes", //placeholder
+        placeholder: "Select Restrictions...", //placeholder
         tags: true,
         tokenSeparators: ["/", ",", ";", " "],
       });
     });
-    $(document).ready(function () {
-      $(".mul-select-allergies").select2({
-        placeholder: "select allergies", //placeholder
-        tags: true,
-        tokenSeparators: ["/", ",", ";", " "],
-      });
-    });
+    // $(document).ready(function () {
+    //   $(".mul-select-allergies").select2({
+    //     placeholder: "select allergies", //placeholder
+    //     tags: true,
+    //     tokenSeparators: ["/", ",", ";", " "],
+    //   });
+    // });
   </script>
 </body>
 

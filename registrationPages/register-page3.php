@@ -11,14 +11,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
     <title>Register</title>
-    <link rel="icon" type="image/png" href="/public/images/CWB logo.png" />
+    <link rel="icon" type="image/png" href="Cooking_with_Benefits/public/images/CWB logo.png" />
     <base href="/" />
   </head>
 
   <body>
     <header class="top-nav-bar">
       <a class="logo" href="index.html"
-        ><img src="Cooking_With_Benefits/public/images/logo/logo-title.png" class="logo"
+        ><img src="Cooking_with_Benefits/public/images/logo/logo-title.png" class="logo"
       /></a>
     </header>
     <div class="wrapper">

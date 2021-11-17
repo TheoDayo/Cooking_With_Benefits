@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Post</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		@font-face {
+			font-family: f;
+			src: url("q.ttf");
+		}
+
+		body {
+			background: #d3d3d347;
+			font-family: f;
+			color: #000000d1;
+		}
+
+		.post {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 500px;
+			border-radius: 10px;
+			background: white;
+		}
+
+		.head {
+			display: flex;
+			border-radius: 10px;
+			padding: 15px;
+			background: white;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.avatar {
+			width: 40px;
+			height: 40px;
+			border-radius: 50px;
+
+		}
+
+		.name_profile {
+			display: flex;
+			align-items: center;
+		}
+
+		.q {
+			margin-left: 10px;
+		}
+
+		.q p {
+			color: grey;
+			font-size: 13px;
+		}
+
+		.svg {
+			height: 23px;
+			width: 23px;
+
+		}
+
+		.body {
+			padding-left: 15px;
+			padding-right: 15px;
+
+		}
+
+		.body p {
+			font-size: 14px;
+		}
+
+		.post_image {
+			margin: auto;
+			height: 250px;
+			width: 50%;
+			margin-top: 10px;
+			border-radius: 10px;
+			position: relative;
+		}
+
+		.btm_icon {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.left_icon {
+			margin-left: 10px;
+			margin-top: 15px;
+		}
+
+		.margin {
+			margin-left: 15px;
+		}
+
+		.right_icon {
+			margin-top: 15px;
+
+		}
+
+		form {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.ico {
+			width: 40px;
+			height: 40px;
+			border-radius: 50px;
+
+		}
+
+		.in {
+			background: transparent;
+			border: none;
+			outline: none;
+			margin-left: 15px;
+
+		}
+
+		.flex {
+			display: flex;
+			align-items: center;
+
+		}
+
+		form {
+			background: #d3d3d347;
+			border-radius: 10px;
+			padding: 10px;
+			margin-bottom: 10px;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="post">
+		<div class="head">
+			<div class="name_profile">
+				<a href="">
+					<img src="images/book.jpg" class="avatar"></a>
+				<div class="q"><a href="">
+						<h4>Theo Dayo</h4>
+					</a>
+					<a href="">
+						<p>12 th January 2021</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="icon">
+				<a href=""><img src="images/ore.svg" class="svg"></a>
+
+			</div>
+
+
+
+		</div>
+		<div class="body">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<img class="post_image" src="images/book.jpg">
+
+
+			<div class="btm_icon">
+				<div class="left_icon">
+					<a href=""><img src="images/heart.svg" class="svg margin"></a>
+					<a href=""><img src="images/comment.svg" class="svg margin"></a>
+					<a href=""><img src="images/share.svg" class="svg margin"></a>
+				</div>
+				<div class="right_icon">
+					<a href=""><img src="images/save.svg" class="svg margin"></a>
+				</div>
+			</div>
+			<form>
+				<div class="flex">
+					<a href=""><img src="images/book.jpg" class="ico"></a>
+					<input type="text" name="" placeholder="Enter Text..." class="in">
+				</div>
+				<a href=""><img src="images/send.svg" class="svg margin"></a>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>
