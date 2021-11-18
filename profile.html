@@ -53,28 +53,11 @@
             <!-- icon column 1 -->
             <div class="icon1">
               <i class="fa fa-globe" aria-hidden="true"></i>
-              <i class="fa fa-transgender" aria-hidden="true"></i>
-            </div>
-            <!-- text column 1 -->
-            <div class="icon1-text">
               <p>Japanese</p>
+              <i class="fa fa-transgender" aria-hidden="true"></i>
               <p>Female</p>
-            </div>
-            <!-- icon column 2 -->
-            <div class="icon2">
               <i> <span class="iconify" data-icon="vs:face-allergy"></span></i>
-              <i
-                class="iconify"
-                data-icon="ion:heart-dislike-circle"
-                data-width="1.8rem"
-                data-height="1.8rem"
-              >
-              </i>
-            </div>
-            <!-- text column 2 -->
-            <div class="icon2-text">
-              <p><span>Allergic to </span>shellfish, dairy</p>
-              <p><span>Dislikes</span> onion, scallion</p>
+              <p><span>Dietary restrictions: </span>shellfish, dairy</p>
             </div>
           </div>
 
@@ -137,11 +120,112 @@
 
       <!-- recipes container -->
       <div class="recipes-container">
-        <div class="search">search</div>
+        <div class="search">
+          <div class="fas fa-search"></div>
+
+          <input type="text" placeholder="search" />
+          <div class="fas fa-times"></div>
+        </div>
         <div class="recipes-grid">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
+          <div>
+            <div class="recipe-img">
+              <img src="/public/images/food/cake.jpg" alt="" />
+            </div>
+            <div class="recipe-details">
+              <div class="recipe-title"><h6>Chocolate Cake</h6></div>
+              <div class="recipe-middle">
+                <div class="icon2">
+                  <i class="fa fa-globe" aria-hidden="true"></i>
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="icon2-text">
+                  <p>French</p>
+                  <p>1h30m</p>
+                </div>
+                <div class="icon3">
+                  <i class="fas fa-concierge-bell"></i>
+                  <i
+                    class="iconify"
+                    data-icon="emojione-monotone:fork-and-knife-with-plate"
+                  ></i>
+                </div>
+                <div class="icon3-text">
+                  <p>Serves&nbsp10</p>
+                  <!-- %nbsp is a space. removing it starts a new line -->
+                  <p>Lunch</p>
+                </div>
+              </div>
+              <div class="rate">
+                <p>48 Reviews</p>
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+              </div>
+            </div>
+
+            <!-- <div class="recipe-details"></div> -->
+          </div>
+          <div>
+            <div class="recipe-img">
+              <img src="/public/images/food/cake.jpg" alt="" />
+            </div>
+
+            <div class="recipe-details">
+              <div class="recipe-title"><h6>Chocolate Cake</h6></div>
+              <div class="recipe-middle">
+                <div class="icon2">
+                  <i class="fa fa-globe" aria-hidden="true"></i>
+                  <i class="fas fa-clock"></i>
+                </div>
+
+                <div class="icon2-text">
+                  <p>French</p>
+                  <p>1h30m</p>
+                </div>
+
+                <div class="icon3">
+                  <i class="fas fa-concierge-bell"></i>
+                  <i
+                    class="iconify"
+                    data-icon="emojione-monotone:fork-and-knife-with-plate"
+                  ></i>
+                </div>
+
+                <div class="icon3-text">
+                  <p>Serves&nbsp10</p>
+                  <!-- %nbsp is a space. removing it starts a new line -->
+                  <p>Lunch</p>
+                </div>
+              </div>
+
+              <div class="rate">
+                <p>48 Reviews</p>
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+              </div>
+            </div>
+
+            <!-- <div class="recipe-details"></div> -->
+          </div>
+
+          <div class="add-recipe">
+            <button class="fas fa-plus-circle"></button>
+          </div>
           <div>4</div>
         </div>
       </div>
