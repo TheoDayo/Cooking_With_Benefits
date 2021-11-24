@@ -113,7 +113,9 @@ hr {
   color: #a3a3a3;
   padding: 0.88rem;
 }
-
+.lower-navbar a {
+  text-decoration: none;
+}
 .lower-navbar li {
   padding: 0;
 }
@@ -139,13 +141,12 @@ hr {
   align-items: center;
   justify-content: center;
 }
-.add-recipe > i {
-  font-size: 40px;
-}
-.add-recipe > button {
+
+.add-recipe > a {
   background-color: transparent;
   font-size: 40px;
   color: #00ffa2;
+  text-decoration: none;
 }
 .add-recipe > button:hover {
   color: #00cc81;
