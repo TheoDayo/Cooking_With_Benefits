@@ -25,6 +25,7 @@
   <form action="/Cooking_with_Benefits/registrationPages/register-page3.php" method="POST" id="registration-form"
     enctype="multipart/form-data">
     <div class="form-subheader" style="text-align:center;">
+    
     <br>
       <h6 class="subtitle">Other Details</h6>
       <h6 class="optional">(Optional)</h6>

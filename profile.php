@@ -8,24 +8,26 @@
       src="https://kit.fontawesome.com/5078679b34.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="public/css/default.css" />
-    <link rel="stylesheet" href="/public/css/pages/profile.css" />
-    <link rel="icon" type="image/png" href="/public/images/CWB logo.png" />
+    <link rel="stylesheet" href="./public/css/default.css" />
+    <link rel="stylesheet" href="./public/css/pages/profile.css" />
+    <link rel="icon" type="image/png" href="/Cooking_with_Benefits/public/images/CWB logo.png" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Profile</title>
+
+    <script>
+    $(document).ready(function () {
+  $(".prof").mouseenter(function () {
+    $("#upload_btn").css("display", "block");
+  });
+  $(".form-profile").mouseleave(function () {
+    $("#upload_btn").css("display", "none");
+  });
+});
+    </script>
   </head>
   <body>
     <header class="top-nav-bar">
-      <div class="left">
-        <a href="profile.html"
-          ><img src="/public/images/logo/logo_solid.png" class="logo-solid"
-        /></a>
-        <div class="search">
-          <div class="fas fa-search"></div>
-          <input type="text" placeholder="search" />
-          <div class="fas fa-times"></div>
-        </div>
-      </div>
-
+      <img src="/Cooking_with_Benefits/public/images/logo/logo-title.png" class="logo" />
       <nav>
         <ul class="nav-links">
           <li><i class="fas fa-user-friends"></i></li>
@@ -42,9 +44,10 @@
         <div class="profile-image">
           <img
             class="prof-img"
-            src="/public/images/avatars/pic_profile_terra_misu.jpg"
+            src="/Cooking_with_Benefits/public/images/avatars/pic_profile_terra_misu.jpg"
             alt=""
           />
+          <label for="img-upload" id="upload_btn">Choose profile</label>
         </div>
 
         <!-- everything on the right of profile image -->
@@ -109,7 +112,7 @@
 
         <!-- recipes | followers | following -->
         <div class="recipes-followers-following">
-          <p><span>52</span> recipes</p>
+          <p><span><?php echo 23;?></span> recipes</p>
           <p><span>69</span> followers</p>
           <p><span>4</span> following</p>
         </div>
