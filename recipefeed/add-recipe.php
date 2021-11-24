@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="public/css/default.css" />
     <link rel="stylesheet" href="/public/css/pages/profile.css" />
     <link rel="stylesheet" href="/public/css/pages/add-recipe.css" />
-    <link rel="stylesheet" href="end/css/main.css" />
-    <link rel="stylesheet" href="end/css/reset.css" />
+    <link rel="stylesheet" href="/public/css/input-ingredient.css" />
     <link rel="icon" type="image/png" href="/public/images/CWB logo.png" />
     <title>Add Recipe</title>
   </head>
@@ -454,7 +453,6 @@
               </div>
             </div>
           </div>
-
           <button class="submit" type="submit">Save</button>
         </form>
       </div>
@@ -463,7 +461,7 @@
     <!-- iconify -->
     <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
     <!-- importing custom js -->
-    <script src="/end/js/main.js"></script>
+    <script src="/public/js/input-ingredient.js"></script>
 
     <script>
       const image_input = document.querySelector("#image_input");
