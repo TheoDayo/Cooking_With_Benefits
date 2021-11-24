@@ -1,0 +1,99 @@
+.recipes-container {
+  margin-top: 25px;
+  background-color: white;
+}
+.title {
+  margin: 5px;
+}
+.title input {
+  font-size: 2rem;
+}
+
+/* input */
+input:focus {
+  outline: none;
+}
+form input,
+form select {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #949494;
+  width: 10rem;
+  margin-left: 5px;
+}
+#hour,
+#minute {
+  width: 1.5rem;
+}
+form p {
+  margin-right: 5px;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* image */
+.food-img,
+#display_image {
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  margin-left: 20%;
+  float: left;
+  background-position: center;
+  background-size: cover;
+}
+.food-img > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid #949494;
+  border-radius: 30px;
+}
+/* back */
+form a {
+  position: absolute;
+  left: -10px;
+  top: -50px;
+  color: #949494;
+}
+/* div */
+.input-detail {
+  position: relative;
+  left: 50px;
+}
+.input-detail > div {
+  margin-bottom: 30px;
+}
+
+.title {
+  margin-top: 20px;
+  margin-left: 20%;
+}
+.time {
+  display: flex;
+}
+/* icons */
+form i,
+form i:hover {
+  color: #333;
+  cursor: auto;
+}
+.iconify {
+  font-size: 1.4rem;
+}
+
+/* btns */
+.submit {
+  width: 20rem;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}

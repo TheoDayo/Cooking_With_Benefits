@@ -46,7 +46,6 @@
   flex-direction: column;
 }
 .profile-top {
-  /* background-color: brown; */
   display: flex;
   float: left;
   align-items: center;
@@ -57,30 +56,20 @@
 .profile-top > div {
   margin: 0 0.5rem;
 }
-.name-age {
-  /* background-color: bisque; */
-}
+
 .profile-middle {
   display: flex;
 }
-.icon1,
-.icon2 {
-  width: 2rem;
+.icon1 {
+  width: 100%;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  /* background-color: bisque; */
+  flex-direction: row;
 }
-.icon1-text,
-.icon2-text {
-  min-width: 8rem;
-  max-width: 28rem;
-  display: flex;
-  flex-direction: column;
-  /* background-color: bisque; */
-  margin-left: 0.1rem;
-  line-height: 2rem;
+.icon1 > i {
+  cursor: auto;
 }
+
 .bio {
   margin-top: 1rem;
   width: 90%;
@@ -137,7 +126,9 @@ hr {
   color: #a3a3a3;
   padding: 0.88rem;
 }
-
+.lower-navbar a {
+  text-decoration: none;
+}
 .lower-navbar li {
   padding: 0;
 }
@@ -151,34 +142,137 @@ hr {
   margin: 0 0.5rem;
   line-height: 2rem;
 }
-.profile-details i:hover {
-  color: rgb(39, 39, 39);
-}
-.active,
+
 .btn:hover {
   color: #00ffa2;
   border-bottom: 3px solid #00ffa2;
 }
 
 /* recipe-list */
+.add-recipe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-recipe > a {
+  background-color: transparent;
+  font-size: 40px;
+  color: #00ffa2;
+  text-decoration: none;
+}
+.add-recipe > button:hover {
+  color: #00cc81;
+}
 .recipes-container {
-  background-color: bisque;
   padding: 0 1rem;
   width: 100%;
-}
-.search {
-  background-color: #a1de53;
-  width: 40%;
-  position: relative;
-  left: 30%;
+  padding: 0 0;
 }
 .recipes-grid {
   display: grid;
-  grid-template-columns: repeat(3, 33%);
-  background-color: #ffaf00;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 9rem;
 }
 .recipes-grid > div {
-  background-color: aqua;
-  margin: 1rem 1rem;
-  /* width: 33%; */
+  background-color: white;
+  margin: 1rem 5px;
+  display: flex;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  cursor: pointer;
 }
+.recipe-img {
+  background-color: white;
+  width: 112px;
+  float: left;
+}
+.recipe-img > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+.recipe-details {
+  display: flex;
+  width: 10rem;
+  flex-direction: column;
+}
+.recipe-middle {
+  display: flex;
+}
+.recipe-title {
+  padding-bottom: 5px;
+}
+.icon2,
+.icon3 {
+  width: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.icon2 {
+  margin-left: 5px;
+}
+.icon3 {
+  margin-left: 15px;
+}
+.icon2 > i,
+.icon3 > i,
+.iconify {
+  color: #333;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  cursor: auto;
+}
+.icon2-text > p,
+.icon3-text > p {
+  width: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.1rem;
+  line-height: 1.2rem;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+}
+
+/* rate */
+.rate > p {
+  font-size: 10px;
+  text-align: center;
+  line-height: 2rem;
+  color: #ffaf00;
+  float: right;
+}
+.rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+.rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 20px;
+  color: #ccc;
+}
+.rate:not(:checked) > label:before {
+  content: "★ ";
+}
+.rate > input:checked ~ label {
+  color: #ffaf00;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #e6a313;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #db9601;
+}
+/* search */

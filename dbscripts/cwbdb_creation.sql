@@ -21,9 +21,10 @@ CREATE TABLE `users` (
   `gender` varchar(50) NOT NULL,
 --  `profile_pic` text NOT NULL,
   `nationality` varchar(50),
-  `fooddislikes` varchar(300),
-  `allergies` varchar(300),
-  `bio` text NOT NULL,
+--  `fooddislikes` varchar(300),
+--  `allergies` varchar(300),
+  `diet` varchar(300),
+  `bio` text,
   `date_created` datetime NOT NULL DEFAULT current_timestamp(),
   
   PRIMARY KEY (user_id)
@@ -85,6 +86,7 @@ CREATE TABLE `recipe_ingredients` (
 CREATE TABLE `matches` (
   `user_A_id` int(30),
   `user_B_id` int(30),
+  `accepted` boolean,
   `date_match` datetime NOT NULL DEFAULT current_timestamp(),
   
   PRIMARY KEY (user_A_id, user_B_id),
