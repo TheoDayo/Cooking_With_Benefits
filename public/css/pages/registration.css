@@ -156,9 +156,9 @@ option:checked {
 
 /* biography-container */
 .bio-container {
-  position: fixed;
-  left: 1000px;
-  bottom: 620px;
+  position: relative;
+  left: 600px;
+  bottom: 280px;
 }
 
 /* #select-dislikes {
