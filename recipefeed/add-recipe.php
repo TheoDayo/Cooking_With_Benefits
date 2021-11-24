@@ -153,7 +153,7 @@
           <div class="input-detail">
             <a href="./profile.html">Back</a>
             <div>
-              <label for="category"
+              <label for="category" 
                 ><i class="fas fa-glass-martini-alt"></i>
               </label>
               <select
