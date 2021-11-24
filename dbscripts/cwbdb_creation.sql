@@ -132,5 +132,12 @@ CREATE TABLE `chat_messages` (
 
 );
 
-
+CREATE TABLE `user_sesions` (
+  `user_id` int(30),
+  `session_starting_time` datetime NOT NULL DEFAULT current_timestamp(),
+  `session_closing_time` datetime,
+  
+  PRIMARY KEY (user_id, session_starting_time),
+  FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
 

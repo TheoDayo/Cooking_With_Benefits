@@ -1,3 +1,22 @@
+<?php
+include "registrationPages/config.php";
+
+if(isset($_POST['submit'])){
+  $email = $_POST['email'];
+  $password = md5($_POST['password']);
+
+  $sql = "SELECT * FROM users WHERE email_address = '$email' AND password = '$password'";
+  $result =mysqli_query($conn,$sql);
+  if($result->num_rows > 0){
+    $row =mysqli_fetch_assoc($result);
+    $_SESSION['email'] = $row['email'];
+    } else{
+      echo "<script>alert('Wrong email or password')</script>";
+    } 
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +24,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./public/css/default.css">
-    <link rel="stylesheet" href="./public/css/pages/index.css" />
+    <!-- <link rel="stylesheet" href="../public/css/pages/index.css" /> -->
     <title>Cooking With Benefits</title>
     <link rel="icon" type="image/png" href="./public/images/CWB logo.png" />
     <!-- <script src="/public/js/index.js"></script> -->
@@ -33,15 +52,16 @@
     <!-- Login popup -->
     <div class="popup" id="myForm">
       <div class="close-btn" onclick="closeForm()">&times;</div>
+      <form action="/"  method = "POST">
       <div class="login-form">
         <h4>Login</h4>
         <div class="form-element">
           <label for="email">Email</label>
-          <input type="text" id="email" placeholder="Enter email" />
+          <input type="text" id="email" placeholder="Enter email" name = "email" value = "<?php echo $email;?>" required/>
         </div>
         <div class="form-element">
           <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter password" />
+          <input type="password" id="password" placeholder="Enter password" name="password" value = "<?php echo $password;?>" required/>
           <a href="#" class="subtext" id="forgot-password"> Forgot password?</a>
         </div>
         <div class="form-element">
@@ -49,11 +69,12 @@
           <label class="subtext" for="remember-me">Remember me</label>
         </div>
         <div class="form-element">
-          <button class="login-btn">LOG IN</button>
+          <button class="login-btn" type ="submit" name = "submit">LOG IN</button>
         </div>
           <p class="subtext">Don't have an account?<a class="create-account subtext" href="./registrationPages/register-page1.php"> Create an account!</a></p>
         </div>
-  </div>
+      </div>
+  </form>
   </div>
 </body>
 
