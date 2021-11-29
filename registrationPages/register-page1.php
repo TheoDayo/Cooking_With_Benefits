@@ -4,8 +4,8 @@ include('config.php');
     $firstName = $_POST['firstName'];
     $lastName = $_POST["lastName"];
     $email_address = $_POST['email'];
-    $password = md5($_POST['password']);
-    $cPassword = md5($_POST['confirm-password']);
+    $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
+    $cPassword = password_hash($_POST['confirm-password'],PASSWORD_DEFAULT);
     $gender = $_POST['gender'];
     $birth_date = date('Y-m-d', strtotime($_POST['birth_date']));
     if ($password == $cPassword) {
@@ -26,8 +26,22 @@ include('config.php');
         echo "<script>alert('Password incorrect!')</script>";
     }
 
+
+//check if user exist
+
+$user_check_query = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
+
+$query = mysqli_query($conn, $user_check_query);
+  $user = mysqli_fetch_assoc($query);
+
+if($user){
+    if($user['email'] === $email_address){
+        echo "<script>alert('E-mail already exists!')</script>";
+
+    }
 }
 
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +67,7 @@ include('config.php');
       /></a>
     </header>
     <!-- Form -->
-    <form action="/Cooking_with_Benefits/registrationPages/register-page2.php" method="POST" id="registration-form" enctype = "multipart/form-data">
+    <form action="/Cooking_with_Benefits/registrationPages/register-page1.php" method="POST" id="registration-form" enctype = "multipart/form-data">
         <div class="form-header">
         <h1 class="header-bar">Register</h1>
         </div>
