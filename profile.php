@@ -10,6 +10,7 @@
     ></script>
     <link rel="stylesheet" href="./public/css/default.css" />
     <link rel="stylesheet" href="./public/css/pages/profile.css" />
+    <link rel="stylesheet" href="./public/css/match.css">
     <link rel="icon" type="image/png" href="/Cooking_with_Benefits/public/images/CWB logo.png" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Profile</title>
@@ -32,7 +33,7 @@
         <ul class="nav-links">
           <li><i class="fas fa-user-friends"></i></li>
           <li><i class="fas fa-comment"></i></li>
-          <li><i class="far fa-bell"></i></li>
+          <li><i onclick="openForm()" class="far fa-bell"></i></li>
         </ul>
       </nav>
     </header>
@@ -248,18 +249,54 @@
       </div>
     </div>
 
-    <!-- <script>
-      // Add active class to the current button (highlight it)
-      var header = document.getElementById("selected");
-      var btns = header.getElementsByClassName("btn");
-      for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
-          var current = document.getElementsByClassName("active");
-          current[0].className = current[0].className.replace(" active", "");
-          this.className += " active";
-        });
-      }
-    </script> -->
+    <!-- match popup -->
+    <div class="popup" id="myForm">
+      <div class="close-btn" onclick="closeForm()">&times;</div>
+        <h4>You have matched with <strong>Moe Hito</strong> </span></h4>
+        
+        <!-- user1 -->
+        <div class="user1">
+          <div class="recipe-name">   
+            <p>Cake</p>
+          </div>
+       
+          <div class="popup-img">
+            <img src="./public/images/food/cake.jpg" alt="">
+          </div>
+        </div>
+
+        <!-- user2 -->
+          <div class="user2">
+          <div class="recipe-name">   
+            <p>Sushi</p>
+          </div>
+       
+          <div class="popup-img">
+            <img src="./public/images/food/sushi.jpeg" alt="">
+          </div>
+        </div>
+
+        <div class="prof-img">
+          <div><img src="./public/images/avatars/pic_profile_terra_misu.jpg" alt=""></div>  
+          <div class="space"></div>
+          <div><img src="./public/images/avatars/pic_profile_moe_hito.jpg" alt=""></div>
+        </div>
+        <!-- pink line -->
+        <hr>
+        <!-- chat btn -->
+        <button class="chat-btn">Chat</button>
+      
+      </div>
+    </div>
+
+    <script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+    </script>
 
     <!-- iconify -->
     <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
