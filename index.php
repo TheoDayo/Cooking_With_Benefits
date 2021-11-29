@@ -1,15 +1,26 @@
 <?php
 include "registrationPages/config.php";
 
+error_reporting(0);
 if(isset($_POST['submit'])){
   $email = $_POST['email'];
   $password = md5($_POST['password']);
+  $existing_email ="SELECT * FROM users WHERE email_address = '$email'";
+
+  if($email != $existing_email)
+  {
+
+  }else{
+    echo "<script>alert('Wrong email')</script>";
+
+  }
 
   $sql = "SELECT * FROM users WHERE email_address = '$email' AND password = '$password'";
   $result =mysqli_query($conn,$sql);
   if($result->num_rows > 0){
     $row =mysqli_fetch_assoc($result);
-    $_SESSION['email'] = $row['email'];
+    $_SESSION['email'] = $row['email_address'];
+    header("Location: Cooking_With_Benefits/registrationPages/welcome.php");
     } else{
       echo "<script>alert('Wrong email or password')</script>";
     } 
@@ -24,7 +35,7 @@ if(isset($_POST['submit'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./public/css/default.css">
-    <!-- <link rel="stylesheet" href="../public/css/pages/index.css" /> -->
+    <link rel="stylesheet" href="./public/css/pages/index.css" />
     <title>Cooking With Benefits</title>
     <link rel="icon" type="image/png" href="./public/images/CWB logo.png" />
     <!-- <script src="/public/js/index.js"></script> -->
@@ -52,7 +63,7 @@ if(isset($_POST['submit'])){
     <!-- Login popup -->
     <div class="popup" id="myForm">
       <div class="close-btn" onclick="closeForm()">&times;</div>
-      <form action="/"  method = "POST">
+      <form action="/Cooking_with_Benefits/registrationPages/welcome.php"  method = "POST">
       <div class="login-form">
         <h4>Login</h4>
         <div class="form-element">
