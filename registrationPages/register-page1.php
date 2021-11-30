@@ -4,43 +4,32 @@ include('config.php');
     $firstName = $_POST['firstName'];
     $lastName = $_POST["lastName"];
     $email_address = $_POST['email'];
-    $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
-    $cPassword = password_hash($_POST['confirm-password'],PASSWORD_DEFAULT);
+    $password = md5($_POST['password']);
+    $cPassword = md5($_POST['confirm-password']);
     $gender = $_POST['gender'];
     $birth_date = date('Y-m-d', strtotime($_POST['birth_date']));
     if ($password == $cPassword) {
-        $sql = "INSERT INTO users (firstName, lastName, email_address, password, gender, birth_date)
-        VALUES ('$firstName', '$lastName', '$email_address', '$password', '$gender', '$birth_date')";
-
+        //selecting the same email and password
+        $sql = "SELECT * FROM users WHERE email_address ='$email_address'";
         $result = mysqli_query($conn, $sql);
 
+        if(!$result->num_rows > 0){
+        $sql = "INSERT INTO users (firstName, lastName, email_address, password, gender, birth_date)
+            VALUES ('$firstName', '$lastName', '$email_address', '$password', '$gender', '$birth_date')";
+        $result = mysqli_query($conn, $sql);
         if ($result) {
             echo "<script>alert('Registration Complete!')</script>";
             header("Location:register-page2.php");
-
         } else {
             echo "<script>alert('Something went wrong!')</script>";
-
         }
+        }else{
+             echo "<script>alert('E-mail already exists!')</script>";
+        }
+        
     } else {
         echo "<script>alert('Password incorrect!')</script>";
     }
-
-
-//check if user exist
-
-$user_check_query = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
-
-$query = mysqli_query($conn, $user_check_query);
-  $user = mysqli_fetch_assoc($query);
-
-if($user){
-    if($user['email'] === $email_address){
-        echo "<script>alert('E-mail already exists!')</script>";
-
-    }
-}
-
 }
 ?>
 <!DOCTYPE html>

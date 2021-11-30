@@ -1,31 +1,26 @@
 <?php
 include "registrationPages/config.php";
 
+session_start();
+
 error_reporting(0);
+
 if(isset($_POST['submit'])){
   $email = $_POST['email'];
   $password = md5($_POST['password']);
-  $existing_email ="SELECT * FROM users WHERE email_address = '$email'";
+  $sql =  "SELECT * FROM users WHERE email_address = '$email' AND password = '$password'";
+  $result = mysqli_query($conn, $sql);
 
-  if($email != $existing_email)
-  {
+  if($result->num_rows > 0){
+    $rows = mysqli_fetch_assoc($result);
+    $_SESSION['email'] = $row['email'];
+    header("Location:/Cooking_with_Benefits/profile.php");
 
-  }else{
-    echo "<script>alert('Wrong email')</script>";
+  } else{
+    echo "<script>alert('E-mail or password incorrect')</script>";
 
   }
-
-  $sql = "SELECT * FROM users WHERE email_address = '$email' AND password = '$password'";
-  $result =mysqli_query($conn,$sql);
-  if($result->num_rows > 0){
-    $row =mysqli_fetch_assoc($result);
-    $_SESSION['email'] = $row['email_address'];
-    header("Location: Cooking_With_Benefits/registrationPages/welcome.php");
-    } else{
-      echo "<script>alert('Wrong email or password')</script>";
-    } 
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -63,16 +58,16 @@ if(isset($_POST['submit'])){
     <!-- Login popup -->
     <div class="popup" id="myForm">
       <div class="close-btn" onclick="closeForm()">&times;</div>
-      <form action="/Cooking_with_Benefits/registrationPages/welcome.php"  method = "POST">
+      <form action="index.php"  method = "POST">
       <div class="login-form">
         <h4>Login</h4>
         <div class="form-element">
           <label for="email">Email</label>
-          <input type="text" id="email" placeholder="Enter email" name = "email" value = "<?php echo $email;?>" required/>
+          <input type="text" id="email" placeholder="Enter email" name = "email" value = "<?php echo $email; ?>" required/>
         </div>
         <div class="form-element">
           <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter password" name="password" value = "<?php echo $password;?>" required/>
+          <input type="password" id="password" placeholder="Enter password" name="password" value = "<?php echo $_POST['password'];?>" required/>
           <a href="#" class="subtext" id="forgot-password"> Forgot password?</a>
         </div>
         <div class="form-element">
