@@ -10,9 +10,9 @@ $email = "";
 $gender = "";
 $birthdate = "";
 
-if(isset($_SESSION['firstName'])){
-$firstName = $_SESSION['firstName'];
-$lastName = $_SESSION['lastName'];
+if(isset($_SESSION['firstname'])){
+$firstName = $_SESSION['firstname'];
+$lastName = $_SESSION['lastname'];
 $email = $_SESSION['email'];
 $gender = $_SESSION['gender'];
 $birthdate = $_SESSION['birthdate'];
