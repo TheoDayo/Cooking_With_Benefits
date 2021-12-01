@@ -1,9 +1,15 @@
 <?php
-include "registrationPages/config.php";
+include ("config.php");
 
 session_start();
 
 error_reporting(0);
+
+"SELECT 'It works' FROM users";
+
+// if (isset($_SESSION['email'])) {
+//     header("Location: profile.php");
+// }
 
 if(isset($_POST['submit'])){
   $email = $_POST['email'];
@@ -11,9 +17,18 @@ if(isset($_POST['submit'])){
   $sql =  "SELECT * FROM users WHERE email_address = '$email' AND password = '$password'";
   $result = mysqli_query($conn, $sql);
 
-  if($result->num_rows > 0){
-    $rows = mysqli_fetch_assoc($result);
-    $_SESSION['email'] = $row['email'];
+  if ($result->num_rows > 0){
+    $row = mysqli_fetch_assoc($result);
+    $_SESSION['firstname'] = $row['firstname'];
+    $_SESSION['lastname'] = $row['lastname'];
+    $_SESSION['email'] = $row['email_address'];
+    $_SESSION['gender'] = $row['gender'];
+    $_SESSION['birthdate'] = $row['birth_date'];
+    $_SESSION['nationality'] = $row['nationality'];
+    $_SESSION['diet'] = $row['diet'];
+    $_SESSION['bio'] = $row['bio'];
+    $_SESSION['date_created'] = $row['date_created'];
+
     header("Location:/Cooking_with_Benefits/profile.php");
 
   } else{
@@ -22,7 +37,6 @@ if(isset($_POST['submit'])){
   }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,7 +52,7 @@ if(isset($_POST['submit'])){
     <!-- top nav bar -->
     <div class="bg">
       <header class="top-nav-bar">
-        <a class="logo" href="index.html"><img src="./public/images/logo/logo-title.png" class="logo" /></a>
+        <a class="logo" href="index.php"><img src="./public/images/logo/logo-title.png" class="logo" /></a>
         <nav>
           <ul class="nav-links">
             <li><a href="#">Products</a></li>
@@ -58,7 +72,7 @@ if(isset($_POST['submit'])){
     <!-- Login popup -->
     <div class="popup" id="myForm">
       <div class="close-btn" onclick="closeForm()">&times;</div>
-      <form action="index.php"  method = "POST">
+      <form action=""  method = "POST">
       <div class="login-form">
         <h4>Login</h4>
         <div class="form-element">
@@ -67,7 +81,7 @@ if(isset($_POST['submit'])){
         </div>
         <div class="form-element">
           <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter password" name="password" value = "<?php echo $_POST['password'];?>" required/>
+          <input type="password" id="password" placeholder="Enter password" name="password"  value = "<?php echo $_POST['password']; ?>"required/>
           <a href="#" class="subtext" id="forgot-password"> Forgot password?</a>
         </div>
         <div class="form-element">
