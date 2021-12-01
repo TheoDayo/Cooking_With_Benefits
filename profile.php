@@ -101,7 +101,7 @@ $birthdate = $_SESSION['birthdate'];
           <!-- bio -->
           <div class="bio">
             <p>
-              I’m a college student looking to make friends with cooks. I’ve
+              sdsadent looking to make friends with cooks. I’ve
               been cooking for 5 years, and I want to expand my range of
               recipes!
             </p>
