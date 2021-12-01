@@ -1,3 +1,20 @@
+<?php 
+session_start();
+
+$firstName = "";
+$lastName = "";
+$email = "";
+$gender = "";
+$birthdate = "";
+
+if(isset($_SESSION['firstName'])){
+$firstName = $_SESSION['firstName'];
+$lastName = $_SESSION['lastName'];
+$email = $_SESSION['email'];
+$gender = $_SESSION['gender'];
+$birthdate = $_SESSION['birthdate'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -55,7 +72,7 @@
         <div class="details-right">
           <!-- top side of profile details -->
           <div class="profile-top">
-            <div class="name-age"><h5>Terra Misu, 20</h5></div>
+            <div class="name-age"><?php echo $firstName;?>, 20</h5></div>
             <div class="follow-btn"><button>Follow</button></div>
             <div class="options-btn">
               <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
@@ -69,7 +86,7 @@
               <i class="fa fa-globe" aria-hidden="true"></i>
               <p>Japanese</p>
               <i class="fa fa-transgender" aria-hidden="true"></i>
-              <p>Female</p>
+              <?php echo "<p>". $gender ."</p>";?>
               <i> <span class="iconify" data-icon="vs:face-allergy"></span></i>
               <p><span>Dietary restrictions: </span>shellfish, dairy</p>
             </div>
