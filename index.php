@@ -1,9 +1,13 @@
 <?php
-include "registrationPages/config.php";
+include ("config.php");
+
+
 
 session_start();
 
 error_reporting(0);
+
+"SELECT 'It works' FROM users";
 
 // if (isset($_SESSION['email'])) {
 //     header("Location: profile.php");
@@ -24,11 +28,6 @@ if(isset($_POST['submit'])){
     $_SESSION['birthdate'] = $row['birth_date'];
 
     header("Location:/Cooking_with_Benefits/profile.php");
-
-    if(!isset($_SESSION['gender'])){
-      echo "<script>alert('gender')</script>";
-    }
-
   } else{
     echo "<script>alert('E-mail or password incorrect')</script>";
 

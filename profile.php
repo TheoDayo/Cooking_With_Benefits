@@ -13,6 +13,8 @@ $lastName = $_SESSION['lastName'];
 $email = $_SESSION['email'];
 $gender = $_SESSION['gender'];
 $birthdate = $_SESSION['birthdate'];
+}else{
+  echo "<script>alert('Sessions not working')</script>";
 }
 ?>
 <!DOCTYPE html>
