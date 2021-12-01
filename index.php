@@ -1,20 +1,26 @@
 <?php
 include "registrationPages/config.php";
 
+session_start();
+
+error_reporting(0);
+
 if(isset($_POST['submit'])){
   $email = $_POST['email'];
   $password = md5($_POST['password']);
+  $sql =  "SELECT * FROM users WHERE email_address = '$email' AND password = '$password'";
+  $result = mysqli_query($conn, $sql);
 
-  $sql = "SELECT * FROM users WHERE email_address = '$email' AND password = '$password'";
-  $result =mysqli_query($conn,$sql);
   if($result->num_rows > 0){
-    $row =mysqli_fetch_assoc($result);
+    $rows = mysqli_fetch_assoc($result);
     $_SESSION['email'] = $row['email'];
-    } else{
-      echo "<script>alert('Wrong email or password')</script>";
-    } 
-}
+    header("Location:/Cooking_with_Benefits/profile.php");
 
+  } else{
+    echo "<script>alert('E-mail or password incorrect')</script>";
+
+  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +30,7 @@ if(isset($_POST['submit'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./public/css/default.css">
-    <!-- <link rel="stylesheet" href="../public/css/pages/index.css" /> -->
+    <link rel="stylesheet" href="./public/css/pages/index.css" />
     <title>Cooking With Benefits</title>
     <link rel="icon" type="image/png" href="./public/images/CWB logo.png" />
     <!-- <script src="/public/js/index.js"></script> -->
@@ -52,16 +58,16 @@ if(isset($_POST['submit'])){
     <!-- Login popup -->
     <div class="popup" id="myForm">
       <div class="close-btn" onclick="closeForm()">&times;</div>
-      <form action="/"  method = "POST">
+      <form action="index.php"  method = "POST">
       <div class="login-form">
         <h4>Login</h4>
         <div class="form-element">
           <label for="email">Email</label>
-          <input type="text" id="email" placeholder="Enter email" name = "email" value = "<?php echo $email;?>" required/>
+          <input type="text" id="email" placeholder="Enter email" name = "email" value = "<?php echo $email; ?>" required/>
         </div>
         <div class="form-element">
           <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter password" name="password" value = "<?php echo $password;?>" required/>
+          <input type="password" id="password" placeholder="Enter password" name="password" value = "<?php echo $_POST['password'];?>" required/>
           <a href="#" class="subtext" id="forgot-password"> Forgot password?</a>
         </div>
         <div class="form-element">

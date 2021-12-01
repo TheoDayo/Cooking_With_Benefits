@@ -14,7 +14,7 @@ DELETE from `users`;
 -- Samples of inserting data:
 
 
-INSERT INTO `users` (`user_id`, `firstname`, `lastname`, `email`, `password`, `dob`, `gender`, `nationality`, `diet`, `bio`, `date_created`)
+INSERT INTO `users` (`user_id`, `firstname`, `lastname`, `email_address`, `password`, `birth_date`, `gender`, `nationality`, `diet`, `bio`, `date_created`)
 	VALUES
 		(1, 'Terra', 'Misu', 'terra@gmail.com', 'terramisu123', '18/10/2000', 'Female', 'Japanese', 'Vegetarian', 'Hi, I\'m a college student looking to make new friends.', '2021-09-10 10:11:12'),
 		(2, 'Joe', 'Doe', 'joedoe@fake.com', 'joedoe123', '18/10/1998', 'Male', 'Russian', 'Vegetarian', 'Looking to make new friends.', '2021-08-07 10:11:12');

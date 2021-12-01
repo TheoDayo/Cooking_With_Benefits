@@ -1,7 +1,6 @@
 <?php
-include "config.php";
-
-if(isset($_POST['submit-info'])){
+include('config.php');
+ if (isset($_POST['submit-info'])) {
     $firstName = $_POST['firstName'];
     $lastName = $_POST["lastName"];
     $email_address = $_POST['email'];
@@ -9,26 +8,29 @@ if(isset($_POST['submit-info'])){
     $cPassword = md5($_POST['confirm-password']);
     $gender = $_POST['gender'];
     $birth_date = date('Y-m-d', strtotime($_POST['birth_date']));
+    if ($password == $cPassword) {
+        //selecting the same email and password
+        $sql = "SELECT * FROM users WHERE email_address ='$email_address'";
+        $result = mysqli_query($conn, $sql);
 
-    if($password == $cPassword){
+        if(!$result->num_rows > 0){
         $sql = "INSERT INTO users (firstName, lastName, email_address, password, gender, birth_date)
-        VALUES ('$firstName', '$lastName', '$email_address', '$password', '$gender', '$birth_date')";
-
-        $result =mysqli_query($conn, $sql);
-
-        if($result){
+            VALUES ('$firstName', '$lastName', '$email_address', '$password', '$gender', '$birth_date')";
+        $result = mysqli_query($conn, $sql);
+        if ($result) {
             echo "<script>alert('Registration Complete!')</script>";
             header("Location:register-page2.php");
-
-        }else{
+        } else {
             echo "<script>alert('Something went wrong!')</script>";
         }
-    } else{
-        echo"<script>alert('Password incorrect!')</script>";
+        }else{
+             echo "<script>alert('E-mail already exists!')</script>";
+        }
+        
+    } else {
+        echo "<script>alert('Password incorrect!')</script>";
     }
-
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +56,7 @@ if(isset($_POST['submit-info'])){
       /></a>
     </header>
     <!-- Form -->
-    <form action="/Cooking_with_Benefits/registrationPages/register-page2.php" method="POST" id="registration-form" enctype = "multipart/form-data">
+    <form action="/Cooking_with_Benefits/registrationPages/register-page1.php" method="POST" id="registration-form" enctype = "multipart/form-data">
         <div class="form-header">
         <h1 class="header-bar">Register</h1>
         </div>
