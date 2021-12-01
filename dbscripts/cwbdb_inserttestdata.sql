@@ -67,3 +67,8 @@ INSERT INTO `matches` (`user_A_id`, `user_B_id`, `accepted`, `date_match`)
 	VALUES
 		(1, 2, FALSE, '2021-11-17 10:30:07');
 
+
+INSERT INTO `rating_and_review` (user_reviewer_id, user_reviewed_id, recipe_id, rating, comment)
+	VALUES (2, 1, 1, 1, 'Thats not good'),
+		(2, 1, 2, 4, 'Thats good');
+
