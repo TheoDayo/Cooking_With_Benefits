@@ -37,6 +37,7 @@
         </ul>
       </nav>
     </header>
+
     <!--  -->
     <div class="container">
       <!-- profile details container -->
@@ -247,7 +248,10 @@
           <div>4</div>
         </div>
       </div>
-    </div>
+      <div class="ad">
+        <img src="/public/images/ads/ad_walmart.jpg" alt="">
+      </div>
+  </div>
 
     <!-- match popup -->
     <div class="popup" id="myForm">

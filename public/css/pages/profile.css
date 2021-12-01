@@ -275,4 +275,11 @@ hr {
 .rate > label:hover ~ input:checked ~ label {
   color: #db9601;
 }
-/* search */
+/* ad */
+.ad {
+  width: 100%;
+  height: 50%;
+}
+
+.ad > img {
+}
