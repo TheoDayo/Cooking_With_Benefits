@@ -1,8 +1,6 @@
 <?php
 include ("config.php");
 
-
-
 session_start();
 
 error_reporting(0);
@@ -26,8 +24,19 @@ if(isset($_POST['submit'])){
     $_SESSION['email'] = $row['email_address'];
     $_SESSION['gender'] = $row['gender'];
     $_SESSION['birthdate'] = $row['birth_date'];
+    $_SESSION['nationality'] = $row['nationality'];
+    $_SESSION['diet'] = $row['diet'];
+    $_SESSION['bio'] = $row['bio'];
+    $_SESSION['date_created'] = $row['date_created'];
+
+    if(isset($_SESSION['firstName'])){
+      echo "<script>alert('Session asdasd')</script>";
+
+    }
+
 
     header("Location:/Cooking_with_Benefits/profile.php");
+
   } else{
     echo "<script>alert('E-mail or password incorrect')</script>";
 
