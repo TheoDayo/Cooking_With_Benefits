@@ -2,14 +2,8 @@
 include ("config.php");
 
 session_start();
-
 error_reporting(0);
 
-"SELECT 'It works' FROM users";
-
-// if (isset($_SESSION['email'])) {
-//     header("Location: profile.php");
-// }
 
 if(isset($_POST['submit'])){
   $email = $_POST['email'];
