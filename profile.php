@@ -16,6 +16,10 @@ $lastName = $_SESSION['lastname'];
 $email = $_SESSION['email'];
 $gender = $_SESSION['gender'];
 $birthdate = $_SESSION['birthdate'];
+$nationality = $_SESSION['nationality'];
+$diet = $_SESSION['diet'];
+$bio = $_SESSION['bio'];
+
 }else{
   echo "<script>alert('Sessions not working')</script>";
 }
@@ -90,20 +94,18 @@ $birthdate = $_SESSION['birthdate'];
             <!-- icon column 1 -->
             <div class="icon1">
               <i class="fa fa-globe" aria-hidden="true"></i>
-              <p>Japanese</p>
+              <p><?php echo $nationality;?></p>
               <i class="fa fa-transgender" aria-hidden="true"></i>
               <?php echo "<p>". $gender ."</p>";?>
               <i> <span class="iconify" data-icon="vs:face-allergy"></span></i>
-              <p><span>Dietary restrictions: </span>shellfish, dairy</p>
+              <p><span>Dietary restrictions: </span><?php echo $diet; ?></p>
             </div>
           </div>
 
           <!-- bio -->
           <div class="bio">
             <p>
-              sdsadent looking to make friends with cooks. I’ve
-              been cooking for 5 years, and I want to expand my range of
-              recipes!
+              <?php echo $bio;?>
             </p>
           </div>
 
@@ -328,3 +330,4 @@ $birthdate = $_SESSION['birthdate'];
     <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
   </body>
 </html>
+

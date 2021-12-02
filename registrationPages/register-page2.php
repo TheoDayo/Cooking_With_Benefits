@@ -1,7 +1,35 @@
 <?php 
-include('../config.php');
+include '../config.php';
+session_start();
 
+// $id = $_SESSION['user_id'];
 
+$email = $_SESSION['email'];
+if(isset($_SESSION['email'])){
+  
+}else{
+  echo "<script>alert('Sessions not working')</script>";
+}
+
+if(isset($_POST['continue'])){
+  $nationality = $_POST['nationality'];
+  $diet = $_POST['diet'];
+  $bio = $_POST['bio'];
+
+  $sql = "SELECT * FROM users WHERE email_address ='$email'";
+  $result = mysqli_query($conn, $sql);
+
+  if ($result->num_rows > 0) {
+    $row = mysqli_fetch_assoc($result);
+    $sql = "UPDATE users SET nationality='$nationality', diet ='$diet',bio='$bio' WHERE email_address ='$email'";
+    $result = mysqli_query($conn, $sql);
+    if($result){
+      header("Location:register-page3.php");
+    }else{
+      echo "<script>alert('Something went wrong!')</script>";
+    }
+  }
+}
 
 
 ?>
@@ -31,7 +59,7 @@ include('../config.php');
         class="logo" /></a>
   </header>
   <!-- Form -->
-  <form action="/Cooking_with_Benefits/registrationPages/register-page3.php" method="POST" id="registration-form"
+  <form action="/Cooking_with_Benefits/registrationPages/register-page2.php" method="POST" id="registration-form"
     enctype="multipart/form-data">
     <div class="form-subheader" style="text-align:center;">
     
@@ -243,9 +271,9 @@ include('../config.php');
         </select>
         <br><br><br>
       </div>
-      <div class=" dislikes-container" id="block">
-        <label for="dislikes"><b><br>Dietary&emsp; Restrictions:&emsp;</b></label>
-        <select multiple="true" name="dislikes" class="select-dislikes mul-select-dislikes" id="dislikes"
+      <div class=" diet-container" id="block">
+        <label for="diet"><b><br>Dietary&emsp; Restrictions:&emsp;</b></label>
+        <select multiple="true" name="diet" class="select-dislikes mul-select-dislikes" id="dislikes"
           style="width:400px;" onmousedown="if(this.options.length>8){this.size=8;}" onchange="this.size=0"
           onblur="this.size=0;">
           <option value="vegetarian">Vegetarian</option>
@@ -328,12 +356,12 @@ include('../config.php');
       <div class="bio-container">
         <label for="biography"><b>Biography&emsp;</b></label>
         <br>
-        <textarea style="width: 500px; height: 250px; resize: none; padding: 5px;"></textarea>
+        <textarea style="width: 500px; height: 250px; resize: none; padding: 5px;" name = "bio"></textarea>
       </div>
     </div>
       <div class="btns-page2" style = "bottom:300px;">
       <button class="skip-btn"><a href = "/Cooking_with_Benefits/registrationPages/register-page3.php">Skip</a></button>
-      <button class="continue-btn" type="submit">Continue</button>
+      <button class="continue-btn" type="submit" name = "continue">Continue</button>
     </div>
   </form>
   <script>

@@ -2,8 +2,8 @@
 include('../config.php');
 
 error_reporting(0);
-
 session_start();
+
 
  if (isset($_POST['submit-info']))   {
     $firstName = $_POST['firstName'];
@@ -14,50 +14,15 @@ session_start();
     $gender = $_POST['gender'];
     $birth_date = date('Y-m-d', strtotime($_POST['birth_date']));
 
-    // //Upload Photo
-    // if(isset($_FILES['profile_photo'])){
-    //     $img_name = $_FILES['profile_photo']['name'];
-    //     $img_size = $_FILES['profile_photo']['size'];
-    //     $error = $_FILES['profile_photo']['error'];
-    //     $tmp_name = $_FILES['profile_photo']['name'];
-
-    //     if($error === 0){
-    //         if($img_size > 125000){
-    //             $em = "Sorry, your file is too large";
-    //             header("Location: register-page1.php?error=$em");
-    //         }else{
-    //             $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
-    //             $img_ex_lc = strtolower($img_ex);
-
-    //             $allowed_ext =array("jpg", "jpeg", "png");
-                
-    //             if(in_array($img_ex_lc,$allowed_ext)){
-    //                 $new_img_name = uniqid("IMG-", true) . '.' . $img_ex_lc;
-    //                 $img_upload_path = 'uploads/' . $new_img_name;
-    //                 move_uploaded_file($tmp_name, $img_upload_path);
-    //             }
-    //         }
-
-    //     }else{
-    //         $em = "unknown error occured!";
-    //         header("Location: register-page1.php?error=$em");
-    //     }
-
-
-    // }else{
-    //     // header("Location: register-page1.php");
-    //     echo "<script>alert('E-mail already errrosdf!')</script>";
-
-    // }
-
-
 
     if ($password == $cPassword) {
         //selecting the same email and password
         $sql = "SELECT * FROM users WHERE email_address ='$email_address'";
+        $_SESSION['email'] = $email_address;
         $result = mysqli_query($conn, $sql);
 
         if(!$result->num_rows > 0){
+        $row = mysqli_fetch_assoc($result);
         $sql = "INSERT INTO users (firstName, lastName, email_address, password, gender, birth_date)
             VALUES ('$firstName', '$lastName', '$email_address', '$password', '$gender', '$birth_date')";
         $result = mysqli_query($conn, $sql);
