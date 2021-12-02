@@ -83,7 +83,6 @@ strong {
 .prof-img {
   position: relative;
   justify-content: center;
-  top: -100px;
   z-index: 1;
 }
 .prof-img > div {
