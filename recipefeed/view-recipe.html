@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/5078679b34.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/public/css/default.css" />
+    <link rel="stylesheet" href="/public/css/pages/profile.css" />
+    <link rel="stylesheet" href="/public/css/pages/add-recipe.css" />
+    <link rel="stylesheet" href="/public/css/input-ingredient.css" />
+    <link rel="icon" type="image/png" href="/public/images/CWB logo.png" />
+    <title>Recipe</title>
+
+    <style>
+      select:disabled {
+        /* removes arrows from select */
+        -webkit-appearance: none;
+      }
+
+      input[type="checkbox"] {
+       width: 1rem;
+      }
+
+      ul {
+        list-style: none;
+
+      } 
+      ul li {
+                color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top-nav-bar">
+      <div class="left">
+        <a href="profile.html"
+          ><img src="/public/images/logo/logo_solid.png" class="logo-solid"
+        /></a>
+        <div class="search">
+          <div class="fas fa-search"></div>
+          <input type="text" placeholder="search" />
+          <div class="fas fa-times"></div>
+        </div>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><i class="fas fa-user-friends"></i></li>
+          <li><i class="fas fa-comment"></i></li>
+          <li><i class="far fa-bell"></i></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <!-- profile details container -->
+      <div class="profile-details">
+        <!-- profile image -->
+        <div class="profile-image">
+          <img
+            class="prof-img-detail"
+            src="/public/images/avatars/pic_profile_terra_misu.jpg"
+            alt=""
+          />
+        </div>
+
+        <!-- everything on the right of profile image -->
+        <div class="details-right">
+          <!-- top side of profile details -->
+          <div class="profile-top">
+            <div class="name-age"><h5>Terra Misu, 20</h5></div>
+            <div class="follow-btn"><button>Follow</button></div>
+            <div class="options-btn">
+              <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <!-- middle of profile details -->
+          <div class="profile-middle">
+            <!-- icon column 1 -->
+            <div class="icon1">
+              <i class="fa fa-globe" aria-hidden="true"></i>
+              <p>Japanese</p>
+              <i class="fa fa-transgender" aria-hidden="true"></i>
+              <p>Female</p>
+              <i> <span class="iconify" data-icon="vs:face-allergy"></span></i>
+              <p><span>Dietary restrictions: </span>shellfish, dairy</p>
+            </div>
+          </div>
+
+          <!-- bio -->
+          <div class="bio">
+            <p>
+              I’m a college student looking to make friends with cooks. I’ve
+              been cooking for 5 years, and I want to expand my range of
+              recipes!
+            </p>
+          </div>
+
+          <!-- Styles | Specializes in | Wants to learn -->
+          <div class="methods-table">
+            <table>
+              <tr>
+                <th class="column1">Styles</th>
+                <th class="column2">Specializes in</th>
+                <th class="column3">Wants to Learn</th>
+              </tr>
+              <tr class="row2">
+                <td class="column1">Cooking</td>
+                <td class="column2">Japanese, French</td>
+                <td class="column3">Canadian</td>
+              </tr>
+              <tr class="row3">
+                <td class="column1">Baking</td>
+                <td class="column2">Japanese</td>
+                <td class="column3">Brazillian</td>
+              </tr>
+              <tr class="row4">
+                <td class="column1">Mixology</td>
+                <td class="column2">French</td>
+                <td class="column3">-</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- recipes | followers | following -->
+        <div class="recipes-followers-following">
+          <p><span>52</span> recipes</p>
+          <p><span>69</span> followers</p>
+          <p><span>4</span> following</p>
+        </div>
+
+        <hr />
+
+        <!-- profile navbar -->
+        <div class="lower-navbar" id="selected">
+          <nav>
+            <ul class="nav-links">
+              <li>
+                <a href="./profile.html"
+                  ><button class="btn active">Recipes</button></a
+                >
+              </li>
+              <li><button class="btn">About</button></li>
+              <li><button class="btn">Smth</button></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <!-- recipes container -->
+      <div class="recipes-container">
+        <div class="title">
+          <input type="text" placeholder="Chocolate Cake" disabled />
+        </div>
+        <form action="">
+          <div class="food-img" id="display_image">
+            <img src="/public/images/food/cake.jpg" alt="" />
+          </div>
+
+          <div class="input-detail">
+            <a href="./profile.html">Back</a>
+            <div>
+              <label for="category"
+                ><i class="fas fa-glass-martini-alt"></i>
+              </label>
+              <select name="category" class="category" id="category" disabled>
+                <option value="">Baking</option>
+                <option value="cooking" style="color: #ffaf00">Cooking</option>
+                <option value="baking" style="color: #a1de53">Baking</option>
+                <option value="mixology" style="color: #00ffa2">
+                  Mixology
+                </option>
+              </select>
+            </div>
+            <div class="time">
+              <label for="time"><i class="fas fa-clock"></i></label>
+              <input
+                name="time"
+                type="number"
+                min="0"
+                placeholder="1"
+                id="hour"
+                disabled
+              />
+              <p>h</p>
+              <input
+                name="time"
+                type="number"
+                min="0"
+                max="59"
+                placeholder="30"
+                id="minute"
+                disabled
+              />
+              <p>m</p>
+            </div>
+
+            <div>
+              <label for="nationality"
+                ><i class="fa fa-globe" aria-hidden="true"></i
+              ></label>
+              <select
+                name="nationality"
+                class="select-nationality"
+                id="nationality"
+                disabled
+              >
+                <option value="" disabled selected>French</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="servings"></label
+              ><i class="fas fa-concierge-bell"></i>
+              <input
+                name="servings"
+                type="number"
+                placeholder="Serves 10"
+                disabled
+              />
+            </div>
+
+            <div>
+              <label for="meal-type">
+                <i
+                  class="iconify"
+                  data-icon="emojione-monotone:fork-and-knife-with-plate"
+                ></i
+              ></label>
+              <select
+                name="meal-time"
+                id="meal-time"
+                class="meal-time"
+                disabled
+              >
+                <option value="any">Dinner</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="ingredient">
+            <div class="todoBlock">
+              <!-- main title holder -->
+              <div class="titleHolder">
+                <h5>Ingredients</h5>
+              </div>
+              <div class="todoList">
+                <ul>
+                  <li><input type="checkbox">white sugar</input></li>
+                  <li><input type="checkbox">all-purpose flour</input></li>
+                  <li><input type="checkbox">cocoa powder</input></li>
+                  <li><input type="checkbox">baking powder</input></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <button class="submit" type="submit">Request Trade</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- iconify -->
+    <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
+    <!-- importing custom js -->
+    <script src="/public/js/input-ingredient.js"></script>
+  </body>
+</html>
