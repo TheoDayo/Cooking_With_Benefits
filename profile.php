@@ -55,7 +55,7 @@ $bio = $_SESSION['bio'];
   <body>
     <header class="top-nav-bar">
       <div class="left">
-        <a href="profile.html"
+        <a href="profile.php"
           ><img src="./public/images/logo/logo_solid.png" class="logo-solid"
         /></a>
         <div>

@@ -201,8 +201,8 @@
   <body>
     <header class="top-nav-bar">
       <div class="left">
-        <a href="profile.html"><img src="public/images/logo/logo_solid.png" class="logo-solid" /></a>
-        <a href="profile.html"><img src="public/images/avatars/pic_profile_theo_dayo.jpg" class="logo-solid" /></a>
+        <a href="profile.php"><img src="public/images/logo/logo_solid.png" class="logo-solid" /></a>
+        <a href="profile.php"><img src="public/images/avatars/pic_profile_terra_misu.jpg" class="logo-solid" /></a>
         <div class="search">
           <div class="fas fa-search"></div>
           <input id="search" type="text" placeholder="search" onkeyup="getsearch()" />
