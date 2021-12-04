@@ -14,7 +14,7 @@
   margin: 0 4rem 0 2rem;
   float: left;
 }
-.prof-img {
+.prof-img-detail {
   width: 100%;
   display: flex;
   border-radius: 100px;
@@ -22,6 +22,7 @@
 /* profile-details */
 .profile-details {
   background-color: white;
+  width: 100%;
   flex-direction: row;
   height: 28rem;
   margin-bottom: 1rem;
@@ -274,12 +275,4 @@ hr {
 .rate > input:checked ~ label:hover ~ label,
 .rate > label:hover ~ input:checked ~ label {
   color: #db9601;
-}
-/* ad */
-.ad {
-  width: 100%;
-  height: 50%;
-}
-
-.ad > img {
 }

@@ -54,7 +54,17 @@ $bio = $_SESSION['bio'];
   </head>
   <body>
     <header class="top-nav-bar">
-      <img src="/Cooking_with_Benefits/public/images/logo/logo-title.png" class="logo" />
+      <div class="left">
+        <a href="profile.html"
+          ><img src="./public/images/logo/logo_solid.png" class="logo-solid"
+        /></a>
+        <div class="search">
+          <div class="fas fa-search"></div>
+          <input type="text" placeholder="search" />
+          <div class="fas fa-times"></div>
+        </div>
+      </div>
+
       <nav>
         <ul class="nav-links">
           <li><i class="fas fa-user-friends"></i></li>
@@ -71,7 +81,7 @@ $bio = $_SESSION['bio'];
         <!-- profile image -->
         <div class="profile-image">
           <img
-            class="prof-img"
+            class="prof-img-detail"
             src="/Cooking_with_Benefits/public/images/avatars/pic_profile_terra_misu.jpg"
             alt=""
           />
@@ -272,10 +282,12 @@ $bio = $_SESSION['bio'];
           <div>4</div>
         </div>
       </div>
-      <div class="ad">
-        <img src="/public/images/ads/ad_walmart.jpg" alt="">
-      </div>
+      
   </div>
+
+      <!-- <div class="ad">
+        <img src="/Cooking_with_Benefits/public/images/ads/ad_walmart.jpg" alt="">
+      </div> -->
 
     <!-- match popup -->
     <div class="popup" id="myForm">
@@ -310,7 +322,7 @@ $bio = $_SESSION['bio'];
           <div><img src="./public/images/avatars/pic_profile_moe_hito.jpg" alt=""></div>
         </div>
         <!-- pink line -->
-        <hr>
+        <div class="pink-line"><hr></div>
         <!-- chat btn -->
         <button class="chat-btn">Chat</button>
       

@@ -38,7 +38,7 @@
         width: 30%;
         height: 20%;
         border: 1px solid #dcdcdc;
-        margin-bottom: 10px;
+        margin-top: 10px;
         margin-bottom: 10px;
         margin-right: 10px;
         margin-left: 10px;
@@ -47,11 +47,33 @@
         /* justify-content: center; */
         /* align-items: center; */
 
+
+      }
+
+      .center {
+        width: 30%;
+        height: 20%;
+        border: 1px solid #dcdcdc;
+        margin-bottom: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+        float: left;
+        text-align: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
 
       img {
         width: 100%;
         height: 50%;
+      }
+
+      #recipeThumbnail {
+        width: 100%;
+      
       }
 
       /* search */
@@ -98,6 +120,11 @@
         background-color: white;
         height: 4rem;
         border-bottom: 1px solid #dcdcdc;
+      }
+
+      .text-center {
+        font-size: 30px;
+
       }
 
       .header-bar {
@@ -173,11 +200,12 @@
   <body>
     <header class="top-nav-bar">
       <div class="left">
-        <a href="profile.html"><img src="/public/images/logo/logo_solid.png" class="logo-solid" /></a>
+        <a href="profile.html"><img src="public/images/logo/logo_solid.png" class="logo-solid" /></a>
+        <a href="profile.html"><img src="public/images/avatars/pic_profile_theo_dayo.jpg" class="logo-solid" /></a>
         <div class="search">
           <div class="fas fa-search"></div>
           <input id="search" type="text" placeholder="search" onkeyup="getsearch()" />
-          <div class="fas fa-times"></div>
+
         </div>
       </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -187,7 +215,7 @@
           //console.log(search);
           $.ajax( // I just copy pasted this part to
             {
-              url: 'http://localhost/Cooking_With_Benefits/search.php',
+              url: './search.php',
               data: {
                 "search": search,
               },
@@ -195,30 +223,49 @@
               success: function(output) {
 
                 const result = JSON.parse(output);
+                const count = JSON.parse((output)).length
                 console.log(result);
+                console.log(count);
                 var display = "";
 
+
+                display += `<p class="text-center" > We found ${count} fantastic dish results for you! </p>`
+                // this is where the ads go
+                display +=
+                  `<div class="ad-wrapper outer tablet-ad desktop-ad full-column karma-leaderboard-docking-element docked" style="">
+                <a href="https://www.walmart.com/">
+                <div class="ad-sticky-container desktop-ad tablet-ad karma-ad">
+                <div id="div-gpt-leaderboard-flex-1" data-tier="1" class="ad ad-container ad-wrapper type-banner type-970x90-flex margin-16-tb desktop-ad tablet-ad  karma-ad" role="complementary" aria-hidden="true" tabindex="-1" style="width: 100%; text-align: center;" data-google-query-id="CMeXp8vNo_QCFZKOpwodRk4Psg">
+                <div id="google_ads_iframe_3865/ar.mdp.com/tier1/search/search_0__container__" style="border: 1pt none;">
+                <img src = "public/images/ads/ads.jpg" id="google_ads_iframe_3865/ar.mdp.com/tier1/search/search_0" title="This is where the ads go" name="google_ads_iframe_3865/ar.mdp.com/tier1/search/search_0" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" srcdoc="" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation-by-user-activation" style="border: 0px; vertical-align: bottom; width: 728px; height: 90px;" data-google-container-id="1" data-load-complete="true">
+                
+            </img>
+                </a>
+            
+            </div></div></div>
+    </div>`
 
                 if (result.length > 0) {
 
                   result.forEach(element => {
+
                     display += `<div class="box">
           <!-- food image -->
-          <div class="inner-container js-inner-container"><img src="/public/images/food/sushi.jpeg" alt="" title="">
+          <div class="inner-container js-inner-container" id="recipeThumbnail" ><img src="userassets/recipeImgs/${element[3]}/img1.jpg" alt="this is picture of the dish" title="">
             <!-- food title -->
-            <a class="card__titleLink manual-link-behavior" href="https://www.allrecipes.com/recipe/242031/roasted-salsa/" title="${element[0]}">
+            <a class="card__titleLink manual-link-behavior" href="" title="${element[2]}">
               <h3 class="card__title">
-                ${element[0]}
+                ${element[2]}
                 <!-- $row[recipename] -->
               </h3>
             </a>
             <!--stars container-->
             <div class="card__ratingContainer">
               <div class="component recipe-ratings ">
-              <!--  
-              <div class="ratings-dropdown-button" aria-expanded="false"><span class="review-star-text">Rating: ${element[5]} stars</span>
-                  <span class="rating-star active" aria-hidden="true" data-rating="1"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                      <path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+               
+              <div class="ratings-dropdown-button" aria-expanded="false"><span class="review-star-text">Rating: ${element[7]} stars</span>
+                   <span class="rating-star active" aria-hidden="true" data-rating="1"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                     <!-- <path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
                     </svg></span>
                   <span class="rating-star active" aria-hidden="true" data-rating="2"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                       <path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
@@ -231,11 +278,11 @@
                     </svg></span>
                   <span class="rating-star active" aria-hidden="true" data-rating="5"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                       <path class="rating-star-filled" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
-                    </svg></span>
+                    </svg></span> -->
                 </div>
-                -->
+                
               </div>
-              <span class="card__ratingCount card__metaDetailText"> 10 </span>
+              <span class="card__ratingCount card__metaDetailText">Type:  ${element[1]} </span>
             </div>
     
             <!-- details -->
@@ -243,15 +290,22 @@
               <div class="card__detailsContainer-left">
     
                 <div class="card__summary">
-                ${element[2]}
+                Perfect for: ${element[4]}
                 </div>
     
                 <div class="card__author">
                   <span class="card__authorNamePrefix">By</span>
-                  <a class="card__authorNameLink" href="https://www.allrecipes.com/cook/5680438/" title="More content by ${element[3]}" data-tracking-content-headline="Roasted Salsa" data-tracking-category="user action">
-                    <span class="card__authorName">${element[3]}</span>
+                  <a class="card__authorNameLink" href="" title="More content by ${element[5]}" data-tracking-content-headline="Roasted Salsa" data-tracking-category="user action">
+                    <span class="card__authorName"> ${element[5]}</span>
                   </a>
                 </div>
+
+                <div class="card__author">
+                  <span class="card__authorNamePrefix">Bio:</span> ${element[0]}
+                  
+                </div>
+
+
               </div>
     
             </div>
@@ -265,8 +319,6 @@
                   $('#searchResult').html(display);
 
                 }
-                // ${response.hits[i].webformatURL}
-
 
               }
             }
@@ -285,20 +337,22 @@
       </nav>
     </header>
     <!-- this is the container of the food box.  -->
+
+
     <div id="searchResult">
 
-      <div class="box">
+      <div class="center">
         <!-- food image -->
-        <div class="inner-container js-inner-container"><img src="/public/images/food/sushi.jpeg" alt="" title="">
+        <div class="inner-container js-inner-container"><img src="public/images/cookingfriends/cook-fail.jpg" alt="" title="">
           <!-- food title -->
-          <a class="card__titleLink manual-link-behavior" href="https://www.allrecipes.com/recipe/242031/roasted-salsa/" title="Roasted Salsa">
+          <a class="card__titleLink manual-link-behavior" href="" title="Testing">
             <h3 class="card__title">
-              Roasted Salsa
+              Search for your desired cuisine!
               <!-- $row[recipename] -->
             </h3>
           </a>
           <!-- stars container -->
-          <div class="card__ratingContainer">
+          <!-- <div class="card__ratingContainer">
             <div class="component recipe-ratings ">
               <div class="ratings-dropdown-button" aria-expanded="false"><span class="review-star-text">Rating: 4.7 stars</span>
                 <span class="rating-star active" aria-hidden="true" data-rating="1"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -320,10 +374,10 @@
 
             </div>
             <span class="card__ratingCount card__metaDetailText"> 10 </span>
-          </div>
+          </div> -->
 
           <!-- details -->
-          <div class="card__detailsContainer">
+          <!-- <div class="card__detailsContainer">
             <div class="card__detailsContainer-left">
 
               <div class="card__summary">
@@ -338,7 +392,7 @@
               </div>
             </div>
 
-          </div>
+          </div> -->
 
 
         </div>
@@ -360,68 +414,3 @@
   </body>
 
 </html>
-
-<!-- // <script> -->
-<!-- // 	$('.comment-textfield').on('keypress', function (e) {
-// 		if(e.which == 13 && e.shiftKey == false){
-// 			if($('#preload2').length <= 0){
-// 				start_load();
-// 			}else{
-// 				return false;
-// 			}
-// 			var post_id = $(this).attr('data-id')
-// 			var comment = $(this).val()
-// 			$(this).val('')
-// 			$.ajax({
-// 				url:'ajax.php?action=save_comment',
-// 				method:'POST',
-// 				data:{post_id:post_id,comment:comment},
-// 				success:function(resp){
-// 					if(resp){
-// 						resp = JSON.parse(resp)
-// 						if(resp.status == 1){
-// 							var cfield = $('#comment-clone .card-comment').clone()
-// 							cfield.find('.img-circle').attr('src','assets/uploads/'+resp.data.profile_pic)
-// 							cfield.find('.uname').text(resp.data.name)
-// 							cfield.find('.comment').html(resp.data.comment)
-// 							cfield.find('.timestamp').text(resp.data.timestamp)
-// 						$('.post-card[data-id="'+post_id+'"]').find('.card-comments').append(cfield)
-// 						var cc = $('.post-card[data-id="'+post_id+'"]').find('.comment-count').text();
-// 							cc = cc.replace(/,/g,'');
-// 							cc = parseInt(cc) + 1
-// 						$('.post-card[data-id="'+post_id+'"]').find('.comment-count').text(cc)
-// 						}else{
-// 							alert_toast("An error occured","danger")
-// 						}
-// 						end_load()
-// 					}
-// 				}
-
-                
-// 		}
-//     })
-
-//     $("button").click(()=>{
-//         const search = $("#search").val();
-//         const url = "";
-        
-//         $.ajax({
-//             url: url,
-//             success:(items)=>{
-//                 console.log()
-//                 var itemsearched="<div>";
-//                 for (var i =0; i<search_count; i++){
-
-//                 }
-//                 itemsearched+="</div>"
-//                 $("#searching").html(itemSearched)
-//             }
-//         })
-//     })
-
- -->
-
-
-
-
-<!-- </script> -->

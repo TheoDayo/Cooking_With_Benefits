@@ -13,10 +13,13 @@
   border-radius: 0.8rem;
 }
 
-hr {
-  border-bottom: 1px solid#fda5ff;
+.pink-line {
   position: relative;
   top: -34%;
+}
+.pink-line > hr {
+  border-bottom: 1px solid#fda5ff;
+
   z-index: 0;
 }
 /* text */
