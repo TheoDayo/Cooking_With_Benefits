@@ -22,6 +22,9 @@ session_start();
         $result = mysqli_query($conn, $sql);
 
         if(!$result->num_rows > 0){
+            $file = $_FILES['image']['name'];
+
+
         $row = mysqli_fetch_assoc($result);
         $sql = "INSERT INTO users (firstName, lastName, email_address, password, gender, birth_date)
             VALUES ('$firstName', '$lastName', '$email_address', '$password', '$gender', '$birth_date')";

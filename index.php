@@ -51,7 +51,7 @@ if(isset($_POST['submit'])){
           <ul class="nav-links">
             <li><a href="#">Products</a></li>
             <li><a href="#">Learn</a></li>
-            <li><a href="#">Safety</a></li>
+            <li><a href="policies.php">Terms & Conditions</a></li>
             <li><a href="#">Support</a></li>
           </ul>
         </nav>
