@@ -282,10 +282,12 @@ $bio = $_SESSION['bio'];
           <div>4</div>
         </div>
       </div>
-      <div class="ad">
-        <img src="/public/images/ads/ad_walmart.jpg" alt="">
-      </div>
+      
   </div>
+
+      <!-- <div class="ad">
+        <img src="/Cooking_with_Benefits/public/images/ads/ad_walmart.jpg" alt="">
+      </div> -->
 
     <!-- match popup -->
     <div class="popup" id="myForm">
