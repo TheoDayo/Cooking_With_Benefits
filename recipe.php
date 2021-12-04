@@ -91,10 +91,11 @@
       }
 
       .search>input[type="text"] {
-        border-left: none;
+  
         width: 100%;
         height: 100%;
         outline: none;
+        border: none;
       }
 
       .fa-search,
@@ -236,8 +237,8 @@
                 <a href="https://www.walmart.com/">
                 <div class="ad-sticky-container desktop-ad tablet-ad karma-ad">
                 <div id="div-gpt-leaderboard-flex-1" data-tier="1" class="ad ad-container ad-wrapper type-banner type-970x90-flex margin-16-tb desktop-ad tablet-ad  karma-ad" role="complementary" aria-hidden="true" tabindex="-1" style="width: 100%; text-align: center;" data-google-query-id="CMeXp8vNo_QCFZKOpwodRk4Psg">
-                <div id="google_ads_iframe_3865/ar.mdp.com/tier1/search/search_0__container__" style="border: 1pt none;">
-                <img src = "public/images/ads/ads.jpg" id="google_ads_iframe_3865/ar.mdp.com/tier1/search/search_0" title="This is where the ads go" name="google_ads_iframe_3865/ar.mdp.com/tier1/search/search_0" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" srcdoc="" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation-by-user-activation" style="border: 0px; vertical-align: bottom; width: 728px; height: 90px;" data-google-container-id="1" data-load-complete="true">
+                <div id="google_ads_iframe_3865/ar.mdp.com/tier1/search/search_0_container_" style="border: 1pt none;">
+                <img src = "public/images/ads/ads.jg" id="google_ads_iframe_3865/ar.mdp.com/tier1/search/search_0" title="This is where the ads go" name="google_ads_iframe_3865/ar.mdp.com/tier1/search/search_0" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" srcdoc="" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation-by-user-activation" style="border: 0px; vertical-align: bottom; width: 728px; height: 90px;" data-google-container-id="1" data-load-complete="true">
                 
             </img>
                 </a>
@@ -313,6 +314,7 @@
     
           </div>
         </div>`;
+
 
                   });
 

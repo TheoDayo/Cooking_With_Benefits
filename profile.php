@@ -58,10 +58,8 @@ $bio = $_SESSION['bio'];
         <a href="profile.html"
           ><img src="./public/images/logo/logo_solid.png" class="logo-solid"
         /></a>
-        <div class="search">
-          <div class="fas fa-search"></div>
-          <input type="text" placeholder="search" />
-          <div class="fas fa-times"></div>
+        <div>
+         <a href="./recipe.php"> <button>Search Recipe</button></a>
         </div>
       </div>
 
