@@ -2,7 +2,7 @@ MIT License
 
 Copyright (c) 2021 Minh Thang Dao
 Copyright (c) 2021 Eduardo Silva
-Copyright (c) 2021
+Copyright (c) 2021 Raven John Esguerra
 Copyright (c) 2021
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
